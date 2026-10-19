@@ -4,16 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Jonnada Kiran | Data Analyst & Junior Business Analyst</title>
-
-  <meta name="description" content="Portfolio of Jonnada Kiran, aspiring Data Analyst and Junior Business Analyst skilled in Power BI, SQL, Excel, Tableau, Python and business reporting.">
-
   <meta name="theme-color" content="#111d38">
+
+  <title>Jonnada Kiran | Data Analyst &amp; Junior Business Analyst</title>
+  <meta name="description" content="Portfolio of Jonnada Kiran, aspiring Data Analyst and Junior Business Analyst, showcasing analytics projects, skills, education and certifications.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -21,7 +18,7 @@
       --navy: #111d38;
       --navy-light: #1d2b49;
       --blue: #3976e8;
-      --blue-light: #8db8ff;
+      --blue-pale: #edf3ff;
       --background: #f3f6fc;
       --white: #ffffff;
       --text: #19243b;
@@ -39,7 +36,7 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 95px;
+      scroll-padding-top: 100px;
     }
 
     body {
@@ -55,13 +52,8 @@
     }
 
     img {
-      max-width: 100%;
       display: block;
-    }
-
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
+      max-width: 100%;
     }
 
     .container {
@@ -71,6 +63,10 @@
 
     .section {
       padding: 76px 0;
+    }
+
+    .section-white {
+      background: var(--white);
     }
 
     .section-heading {
@@ -88,10 +84,10 @@
     }
 
     .section-heading h2 {
+      color: var(--navy);
       font-size: clamp(28px, 4vw, 36px);
       line-height: 1.25;
       letter-spacing: -1px;
-      color: var(--navy);
       margin-bottom: 12px;
     }
 
@@ -101,31 +97,27 @@
       margin-inline: auto;
     }
 
-    .section-white {
-      background: var(--white);
-    }
-
     .card {
+      min-width: 0;
+      padding: 26px;
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 26px;
       box-shadow: var(--shadow);
       transition: transform 0.25s ease, box-shadow 0.25s ease,
                   border-color 0.25s ease;
-      min-width: 0;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-4px);
       border-color: #b8cff5;
-      box-shadow: 0 18px 42px rgba(17, 29, 56, 0.10);
+      box-shadow: 0 18px 42px rgba(17, 29, 56, 0.09);
     }
 
     .card h3 {
+      color: var(--navy);
       font-size: 18px;
       line-height: 1.45;
-      color: var(--navy);
       margin-bottom: 10px;
     }
 
@@ -143,10 +135,9 @@
 
     .tag {
       display: inline-flex;
-      align-items: center;
       padding: 6px 11px;
       border-radius: 8px;
-      background: #edf3ff;
+      background: var(--blue-pale);
       color: #2855a0;
       font-size: 12px;
       font-weight: 700;
@@ -167,7 +158,6 @@
       font-weight: 700;
       text-decoration: none;
       transition: all 0.25s ease;
-      cursor: pointer;
     }
 
     .btn:hover {
@@ -178,14 +168,14 @@
 
     .btn-primary {
       background: var(--navy);
-      color: var(--white);
       border-color: var(--navy);
+      color: var(--white);
     }
 
     .btn-primary:hover {
       background: var(--blue);
-      color: var(--white);
       border-color: var(--blue);
+      color: var(--white);
     }
 
     /* Navigation */
@@ -194,25 +184,25 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(15px);
-      border-bottom: 1px solid rgba(220, 229, 243, 0.9);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
     }
 
     .nav-inner {
       min-height: 74px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 24px;
     }
 
     .brand {
+      color: var(--navy);
       font-size: 20px;
       font-weight: 800;
-      color: var(--navy);
-      text-decoration: none;
       letter-spacing: -0.7px;
+      text-decoration: none;
       white-space: nowrap;
     }
 
@@ -222,18 +212,17 @@
 
     .nav-links {
       display: flex;
-      align-items: center;
       flex-wrap: wrap;
+      align-items: center;
       justify-content: flex-end;
-      gap: 23px;
+      gap: 12px 21px;
     }
 
     .nav-links a {
-      text-decoration: none;
       color: #46546d;
       font-size: 13px;
       font-weight: 600;
-      transition: color 0.2s ease;
+      text-decoration: none;
     }
 
     .nav-links a:hover {
@@ -260,13 +249,13 @@
       display: inline-flex;
       align-items: center;
       gap: 9px;
-      color: #315ca6;
-      background: #e7efff;
       padding: 8px 13px;
+      margin-bottom: 22px;
       border-radius: 100px;
+      background: #e7efff;
+      color: #315ca6;
       font-size: 12px;
       font-weight: 800;
-      margin-bottom: 22px;
     }
 
     .hero-label::before {
@@ -279,10 +268,10 @@
     }
 
     .hero h1 {
+      color: var(--navy);
       font-size: clamp(36px, 5.5vw, 58px);
       line-height: 1.12;
       letter-spacing: -2px;
-      color: var(--navy);
       margin-bottom: 18px;
     }
 
@@ -298,10 +287,10 @@
     }
 
     .hero-description {
-      color: var(--muted);
       max-width: 620px;
-      margin-bottom: 26px;
+      color: var(--muted);
       font-size: 15px;
+      margin-bottom: 26px;
     }
 
     .hero-actions {
@@ -331,11 +320,11 @@
     .profile-frame {
       width: min(310px, 100%);
       aspect-ratio: 0.88;
-      border-radius: 28px;
       padding: 10px;
-      background: linear-gradient(145deg, #ffffff, #d9e6ff);
-      box-shadow: 0 24px 65px rgba(32, 72, 140, 0.16);
       overflow: hidden;
+      border-radius: 28px;
+      background: linear-gradient(145deg, #fff, #d9e6ff);
+      box-shadow: 0 24px 65px rgba(32, 72, 140, 0.16);
     }
 
     .profile-frame img {
@@ -346,36 +335,46 @@
       border-radius: 21px;
     }
 
+    .profile-fallback {
+      display: none;
+      width: 100%;
+      height: 100%;
+      place-items: center;
+      color: var(--navy);
+      font-size: 48px;
+      font-weight: 800;
+    }
+
     .profile-badge {
       max-width: 100%;
       display: flex;
       align-items: center;
       gap: 10px;
+      padding: 13px 17px;
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: 15px;
-      padding: 13px 17px;
       box-shadow: var(--shadow);
     }
 
-    .profile-badge .badge-dot {
+    .badge-dot {
       width: 10px;
       height: 10px;
       flex-shrink: 0;
-      background: #31b879;
       border-radius: 50%;
+      background: #31b879;
     }
 
     .profile-badge strong {
       display: block;
-      font-size: 12px;
       color: var(--navy);
+      font-size: 12px;
     }
 
     .profile-badge small {
       display: block;
-      font-size: 11px;
       color: var(--muted);
+      font-size: 11px;
       margin-top: 2px;
     }
 
@@ -383,7 +382,7 @@
 
     .about-card {
       max-width: 920px;
-      margin: 0 auto;
+      margin-inline: auto;
       padding: 36px;
     }
 
@@ -404,12 +403,12 @@
       place-items: center;
       width: 45px;
       height: 45px;
-      background: #edf3ff;
+      margin-bottom: 18px;
       border-radius: 13px;
+      background: var(--blue-pale);
       color: var(--blue);
       font-size: 20px;
       font-weight: 800;
-      margin-bottom: 18px;
     }
 
     /* Projects */
@@ -429,13 +428,14 @@
     }
 
     .project-number {
-      color: var(--blue);
-      background: #edf3ff;
-      border-radius: 9px;
+      display: inline-block;
       padding: 5px 10px;
+      margin-bottom: 16px;
+      border-radius: 9px;
+      background: var(--blue-pale);
+      color: var(--blue);
       font-size: 12px;
       font-weight: 800;
-      margin-bottom: 16px;
     }
 
     .project-card p {
@@ -449,9 +449,9 @@
     .project-link {
       display: inline-flex;
       color: var(--blue);
-      text-decoration: none;
       font-size: 13px;
       font-weight: 800;
+      text-decoration: none;
       margin-top: auto;
     }
 
@@ -496,7 +496,7 @@
       margin-bottom: 8px;
     }
 
-    .education-card .institution {
+    .institution {
       color: var(--muted);
       font-size: 13px;
       margin-bottom: 12px;
@@ -504,10 +504,10 @@
 
     .education-result {
       display: inline-block;
-      background: #edf3ff;
-      color: #2855a0;
       padding: 5px 10px;
       border-radius: 8px;
+      background: var(--blue-pale);
+      color: #2855a0;
       font-size: 12px;
       font-weight: 800;
     }
@@ -522,20 +522,20 @@
     }
 
     .certificate-card {
-      padding: 20px;
       display: flex;
       flex-direction: column;
       height: 100%;
+      padding: 20px;
     }
 
     .certificate-image {
       width: 100%;
       aspect-ratio: 1.48;
       object-fit: contain;
-      background: #f4f7fc;
+      margin-bottom: 18px;
       border: 1px solid var(--border);
       border-radius: 12px;
-      margin-bottom: 18px;
+      background: #f4f7fc;
       cursor: zoom-in;
       transition: transform 0.2s ease;
     }
@@ -548,9 +548,9 @@
       font-size: 16px;
     }
 
-    .certificate-card .certificate-meta {
+    .certificate-meta {
       margin-top: 8px;
-      font-size: 13px;
+      font-size: 13px !important;
     }
 
     .certificate-card .tag-list {
@@ -558,7 +558,7 @@
       padding-top: 16px;
     }
 
-    /* Image viewer */
+    /* Certificate image viewer */
 
     .image-viewer {
       position: fixed;
@@ -589,39 +589,39 @@
       right: 25px;
       width: 44px;
       height: 44px;
-      border: 1px solid rgba(255,255,255,0.45);
+      border: 1px solid rgba(255, 255, 255, 0.45);
       border-radius: 50%;
-      background: #ffffff;
+      background: white;
       color: var(--navy);
       font-size: 26px;
       cursor: pointer;
     }
 
-    /* Achievements */
+    /* Achievements: text only */
 
     .achievement-list {
-      max-width: 900px;
-      margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr;
       gap: 18px;
+      max-width: 900px;
+      margin-inline: auto;
     }
 
     .achievement-card {
       display: flex;
-      gap: 18px;
       align-items: flex-start;
+      gap: 18px;
     }
 
     .achievement-symbol {
-      flex-shrink: 0;
       display: grid;
       place-items: center;
+      flex-shrink: 0;
       width: 46px;
       height: 46px;
-      background: #edf3ff;
-      color: var(--blue);
       border-radius: 13px;
+      background: var(--blue-pale);
+      color: var(--blue);
       font-size: 19px;
       font-weight: 800;
     }
@@ -630,13 +630,13 @@
       margin-bottom: 6px;
     }
 
-    /* Leadership */
+    /* Leadership: one photo */
 
     .leadership-card {
       width: min(760px, 100%);
-      margin: 0 auto;
-      overflow: hidden;
+      margin-inline: auto;
       padding: 0;
+      overflow: hidden;
     }
 
     .leadership-card img {
@@ -655,134 +655,168 @@
       margin-top: 8px;
     }
 
-    /* Contact */
+    /* Contact: redesigned with three separate cards */
+
+    .contact-wrap {
+      padding: 76px 0;
+      background:
+        radial-gradient(ellipse at 5% 100%, #e8efff 0%, transparent 40%),
+        #f7f9fd;
+    }
 
     .contact-section {
-      background: var(--navy);
-      color: var(--white);
-      border-radius: 24px;
-      padding: 44px;
+      position: relative;
+      overflow: hidden;
+      padding: 48px;
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--blue), #91baff, #dce8ff);
+    }
+
+    .contact-top {
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
       align-items: center;
-      gap: 36px;
-      margin: 0 auto 40px;
+      gap: 32px;
+      padding-bottom: 30px;
     }
 
-    .contact-section .section-label {
-      color: var(--blue-light);
-      font-size: 13px;
+    .contact-label {
+      display: inline-block;
+      color: var(--blue);
+      font-size: 12px;
       font-weight: 800;
       letter-spacing: 2px;
-      margin-bottom: 18px;
+      margin-bottom: 15px;
     }
 
     .contact-section h2 {
-      color: var(--white);
-      font-size: clamp(27px, 3vw, 36px);
-      line-height: 1.25;
-      letter-spacing: -1px;
-      margin-bottom: 18px;
+      color: var(--navy);
+      font-size: clamp(28px, 3.6vw, 40px);
+      line-height: 1.2;
+      letter-spacing: -1.2px;
+      margin-bottom: 14px;
     }
 
-    .contact-section p {
-      color: #dbe5f7;
+    .contact-intro {
+      max-width: 640px;
+      color: var(--muted);
       font-size: 15px;
       line-height: 1.85;
-      margin-bottom: 12px;
     }
 
-    .contact-section .contact-details {
-      margin-bottom: 0;
-      overflow-wrap: anywhere;
-    }
-
-    .contact-section .contact-details a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .contact-section .contact-details a:hover {
-      text-decoration: underline;
-    }
-
-    .contact-section .contact-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 12px;
-      max-width: 360px;
-    }
-
-    .contact-section .contact-btn {
+    .contact-location {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 7px;
-      min-height: 50px;
-      padding: 0 19px;
-      border: 1px solid #53627d;
-      border-radius: 12px;
-      color: var(--white);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 700;
+      gap: 9px;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      background: #f7f9fd;
+      color: #46546d;
+      font-size: 13px;
+      font-weight: 600;
       white-space: nowrap;
-      transition: background 0.25s ease, border-color 0.25s ease,
-                  transform 0.25s ease;
     }
 
-    .contact-section .contact-btn:hover {
-      background: #243657;
-      border-color: var(--blue-light);
-      transform: translateY(-2px);
+    .contact-location span {
+      color: var(--blue);
     }
 
-    .contact-section .contact-btn.primary {
+    .contact-options {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+      padding-top: 25px;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-option {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+      min-height: 90px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
       background: var(--white);
-      border-color: var(--white);
-      color: var(--navy);
+      text-decoration: none;
+      transition: transform 0.25s ease, border-color 0.25s ease,
+                  background 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .contact-section .contact-btn.primary:hover {
-      background: #dbe8ff;
-      border-color: #dbe8ff;
+    .contact-option:hover {
+      transform: translateY(-4px);
+      border-color: #b7cdf5;
+      background: #f8faff;
+      box-shadow: 0 10px 24px rgba(17, 29, 56, 0.06);
+    }
+
+    .contact-option-icon {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--blue-pale);
+      color: var(--blue);
+      font-size: 19px;
+      font-weight: 800;
+    }
+
+    .contact-option-text {
+      min-width: 0;
+    }
+
+    .contact-option-text strong {
+      display: block;
+      color: var(--navy);
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+
+    .contact-option-text small {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .contact-option-arrow {
+      flex-shrink: 0;
+      margin-left: auto;
+      color: var(--blue);
+      font-size: 17px;
     }
 
     /* Footer */
 
     .footer {
       padding: 25px 0 30px;
+      background: var(--white);
       text-align: center;
       color: var(--muted);
       font-size: 12px;
+      border-top: 1px solid var(--border);
     }
 
     .footer a {
       color: var(--blue);
-      text-decoration: none;
       font-weight: 700;
-    }
-
-    /* Subtle entrance animation */
-
-    @media (prefers-reduced-motion: no-preference) {
-      .fade-up {
-        animation: fadeUp 0.65s ease both;
-      }
-
-      @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(14px);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+      text-decoration: none;
     }
 
     /* Tablet */
@@ -797,7 +831,6 @@
 
       .nav-links {
         justify-content: flex-start;
-        gap: 12px 19px;
       }
 
       .hero-grid {
@@ -810,12 +843,25 @@
       }
 
       .contact-section {
-        gap: 24px;
-        padding: 34px;
+        padding: 36px;
       }
 
-      .contact-section .contact-actions {
-        max-width: 270px;
+      .contact-top {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .contact-location {
+        justify-self: start;
+      }
+
+      .contact-options {
+        gap: 10px;
+      }
+
+      .contact-option {
+        padding: 14px;
+        gap: 10px;
       }
     }
 
@@ -839,10 +885,6 @@
         gap: 35px;
       }
 
-      .hero h1 {
-        letter-spacing: -1.3px;
-      }
-
       .hero-visual {
         grid-row: 1;
       }
@@ -853,10 +895,6 @@
 
       .hero-content {
         text-align: center;
-      }
-
-      .hero-label {
-        justify-content: center;
       }
 
       .hero-description {
@@ -886,21 +924,22 @@
         padding: 25px;
       }
 
+      .contact-wrap {
+        padding: 55px 0;
+      }
+
       .contact-section {
-        grid-template-columns: 1fr;
-        gap: 25px;
         padding: 30px 24px;
-        margin-bottom: 25px;
-        border-radius: 19px;
+        border-radius: 20px;
       }
 
-      .contact-section .contact-actions {
-        justify-content: flex-start;
-        max-width: 100%;
+      .contact-options {
+        grid-template-columns: 1fr;
       }
 
-      .contact-section .contact-btn {
-        flex: 1 1 auto;
+      .contact-option {
+        min-height: 78px;
+        padding: 15px;
       }
 
       .leadership-content {
@@ -910,11 +949,15 @@
 
     @media (max-width: 420px) {
       .nav-links {
-        gap: 9px 14px;
+        gap: 9px 13px;
       }
 
       .nav-links a {
         font-size: 12px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1.3px;
       }
 
       .hero-actions .btn {
@@ -923,15 +966,6 @@
 
       .contact-section {
         padding: 26px 19px;
-      }
-
-      .contact-section .contact-actions {
-        display: grid;
-        grid-template-columns: 1fr;
-      }
-
-      .contact-section .contact-btn {
-        width: 100%;
       }
 
       .achievement-card {
@@ -969,12 +1003,10 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
 
-        <div class="hero-content fade-up">
+        <div class="hero-content">
           <div class="hero-label">Open to Entry-Level Opportunities</div>
 
-          <h1>
-            Hi, I'm <span>Jonnada Kiran</span>
-          </h1>
+          <h1>Hi, I'm <span>Jonnada Kiran</span></h1>
 
           <p class="hero-subtitle">
             Data Analyst | Junior Business Analyst
@@ -983,8 +1015,8 @@
           <p class="hero-description">
             I enjoy turning data into meaningful insights through data
             analysis, visualization, dashboards and reporting. I am looking
-            for opportunities to apply my analytical skills, solve business
-            problems and grow with an experienced team.
+            for opportunities to apply my analytical skills, learn from
+            experienced teams and contribute to meaningful projects.
           </p>
 
           <div class="hero-actions">
@@ -1012,11 +1044,13 @@
           </p>
         </div>
 
-        <div class="hero-visual fade-up">
+        <div class="hero-visual">
           <div class="profile-frame">
             <img src="./profile.jpg"
-                 alt="Jonnada Kiran profile photo"
-                 onerror="this.style.display='none'; this.parentElement.style.display='grid'; this.parentElement.style.placeItems='center'; this.parentElement.innerHTML='<div style=&quot;text-align:center;color:#111d38;font-weight:800;font-size:28px&quot;>JK</div>';">
+                 alt="Profile photo"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+
+            <div class="profile-fallback">JK</div>
           </div>
 
           <div class="profile-badge">
@@ -1245,7 +1279,7 @@
             <p>
               An exploration of Netflix content data to understand the
               distribution of movies and TV shows, content categories,
-              release patterns and other catalog trends.
+              release patterns and catalog trends.
             </p>
             <div class="tag-list">
               <span class="tag">Data Analysis</span>
@@ -1312,9 +1346,7 @@
         <div class="section-heading">
           <div class="eyebrow">Education</div>
           <h2>Academic Background</h2>
-          <p>
-            My educational journey and academic qualifications.
-          </p>
+          <p>My educational journey and academic qualifications.</p>
         </div>
 
         <div class="education-grid">
@@ -1334,9 +1366,7 @@
           <article class="card education-card">
             <div class="education-period">2020 – 2022</div>
             <h3>Class XII – MPC</h3>
-            <p class="institution">
-              Narayana Junior College, Hyderabad
-            </p>
+            <p class="institution">Narayana Junior College, Hyderabad</p>
             <span class="education-result">94%</span>
           </article>
 
@@ -1345,12 +1375,9 @@
         <article class="card education-card center-card">
           <div class="education-period">2020</div>
           <h3>Class X</h3>
-          <p class="institution">
-            Siva Sivani SPS High School
-          </p>
+          <p class="institution">Siva Sivani SPS High School</p>
           <span class="education-result">100%</span>
         </article>
-
       </div>
     </section>
 
@@ -1375,13 +1402,12 @@
                  alt="Food Microbiology for Safe and Sustainable Food Systems certificate"
                  loading="lazy"
                  onclick="openImage(this)"
-                 onerror="this.alt='Certificate image unavailable. Check the filename in your GitHub repository.'">
+                 onerror="this.alt='Certificate image unavailable. Check the filename in your repository.'">
 
             <h3>Food Microbiology for Safe and Sustainable Food Systems</h3>
             <p class="certificate-meta">
               IIT Kharagpur · February – April 2026
             </p>
-
             <div class="tag-list">
               <span class="tag">84%</span>
               <span class="tag">Elite</span>
@@ -1394,13 +1420,12 @@
                  alt="Cell Culture Technologies certificate"
                  loading="lazy"
                  onclick="openImage(this)"
-                 onerror="this.alt='Certificate image unavailable. Check the filename in your GitHub repository.'">
+                 onerror="this.alt='Certificate image unavailable. Check the filename in your repository.'">
 
             <h3>Cell Culture Technologies</h3>
             <p class="certificate-meta">
               IIT Kanpur · August – October 2024
             </p>
-
             <div class="tag-list">
               <span class="tag">71%</span>
               <span class="tag">Elite</span>
@@ -1415,13 +1440,12 @@
                alt="Plant Cell Bioprocessing certificate"
                loading="lazy"
                onclick="openImage(this)"
-               onerror="this.alt='Certificate image unavailable. Check the filename in your GitHub repository.'">
+               onerror="this.alt='Certificate image unavailable. Check the filename in your repository.'">
 
           <h3>Plant Cell Bioprocessing</h3>
           <p class="certificate-meta">
             IIT Madras · July – September 2025
           </p>
-
           <div class="tag-list">
             <span class="tag">58%</span>
           </div>
@@ -1456,9 +1480,7 @@
         <div class="section-heading">
           <div class="eyebrow">Recognition</div>
           <h2>Achievements &amp; Participation</h2>
-          <p>
-            Academic recognition and collaborative participation.
-          </p>
+          <p>Academic recognition and collaborative participation.</p>
         </div>
 
         <div class="achievement-list">
@@ -1480,8 +1502,8 @@
               <h3>Smart India Hackathon 2024</h3>
               <p>
                 Participated in the internal hackathon held on
-                11 September 2024, contributing to a collaborative,
-                problem-solving and innovation-focused experience.
+                11 September 2024, gaining experience in collaboration,
+                problem-solving and innovation-focused teamwork.
               </p>
             </div>
           </article>
@@ -1497,9 +1519,7 @@
         <div class="section-heading">
           <div class="eyebrow">Leadership</div>
           <h2>Leadership &amp; Campus Activities</h2>
-          <p>
-            Collaboration, student engagement and campus involvement.
-          </p>
+          <p>Collaboration, student engagement and campus involvement.</p>
         </div>
 
         <article class="card leadership-card">
@@ -1512,63 +1532,77 @@
             <h3>Joint Secretary — Biotechnology Engineering Association</h3>
             <p>
               Contributed to student association activities and campus
-              engagement, supporting coordination, communication,
-              teamwork and organizational skills.
+              engagement, supporting coordination, communication, teamwork
+              and organizational skills.
             </p>
           </div>
         </article>
       </div>
     </section>
 
-    <!-- CONTACT: IMPROVED FINAL SECTION -->
+    <!-- CONTACT: EMAIL ADDRESS NOT REPEATED -->
 
-    <section class="section section-white" id="contact">
+    <section class="contact-wrap" id="contact">
       <div class="container">
 
         <div class="contact-section">
 
-          <div class="contact-content">
-            <div class="section-label">CONTACT</div>
+          <div class="contact-top">
+            <div>
+              <div class="contact-label">LET'S CONNECT</div>
+              <h2>Have an opportunity in mind?</h2>
 
-            <h2>Let's connect professionally.</h2>
+              <p class="contact-intro">
+                I am interested in entry-level Data Analyst and Junior
+                Business Analyst opportunities where I can apply my skills,
+                learn from experienced teams and contribute to meaningful
+                projects.
+              </p>
+            </div>
 
-            <p>
-              I am interested in entry-level Data Analyst and Junior Business
-              Analyst opportunities where I can apply my skills, learn from
-              experienced teams and contribute to meaningful projects.
-            </p>
-
-            <p class="contact-details">
-              Hyderabad, Telangana, India ·
-              <a href="mailto:jonnadakiran19@gmail.com">
-                jonnadakiran19@gmail.com
-              </a>
-            </p>
+            <div class="contact-location">
+              <span>●</span>
+              Hyderabad, Telangana, India
+            </div>
           </div>
 
-          <div class="contact-actions">
+          <div class="contact-options">
 
-            <a class="contact-btn primary"
+            <a class="contact-option"
                href="mailto:jonnadakiran19@gmail.com">
-              Email Me ↗
+              <span class="contact-option-icon" aria-hidden="true">@</span>
+              <span class="contact-option-text">
+                <strong>Email Me</strong>
+                <small>Get in touch directly</small>
+              </span>
+              <span class="contact-option-arrow" aria-hidden="true">↗</span>
             </a>
 
-            <a class="contact-btn"
+            <a class="contact-option"
                href="https://www.linkedin.com/in/jonnada-kiran-33bab5279/"
                target="_blank"
                rel="noopener noreferrer">
-              LinkedIn ↗
+              <span class="contact-option-icon" aria-hidden="true">in</span>
+              <span class="contact-option-text">
+                <strong>LinkedIn</strong>
+                <small>Connect professionally</small>
+              </span>
+              <span class="contact-option-arrow" aria-hidden="true">↗</span>
             </a>
 
-            <a class="contact-btn"
+            <a class="contact-option"
                href="https://github.com/JONNADAKIRAN"
                target="_blank"
                rel="noopener noreferrer">
-              GitHub ↗
+              <span class="contact-option-icon" aria-hidden="true">&lt;/&gt;</span>
+              <span class="contact-option-text">
+                <strong>GitHub</strong>
+                <small>Explore my projects</small>
+              </span>
+              <span class="contact-option-arrow" aria-hidden="true">↗</span>
             </a>
 
           </div>
-
         </div>
 
       </div>
@@ -1581,7 +1615,7 @@
   <footer class="footer">
     <div class="container">
       <p>
-        © <span id="currentYear">2026</span> Jonnada Kiran ·
+        © <span id="currentYear">2026</span> Jonnada Kiran.
         Built with care and a commitment to continuous learning.
       </p>
       <p style="margin-top: 7px;">
@@ -1591,13 +1625,12 @@
   </footer>
 
   <script>
-    // Update the footer year automatically.
     document.getElementById("currentYear").textContent =
       new Date().getFullYear();
 
-    // Open certificate images in a larger view.
     function openImage(imageElement) {
-      if (!imageElement || !imageElement.complete ||
+      if (!imageElement ||
+          !imageElement.complete ||
           imageElement.naturalWidth === 0) {
         return;
       }
@@ -1611,14 +1644,14 @@
       document.body.style.overflow = "hidden";
     }
 
-    // Close the certificate viewer.
     function closeImage() {
       const viewer = document.getElementById("imageViewer");
+
       viewer.classList.remove("open");
       document.body.style.overflow = "";
+      document.getElementById("expandedImage").src = "";
     }
 
-    // Allow Escape to close the image viewer.
     document.addEventListener("keydown", function(event) {
       if (event.key === "Escape") {
         closeImage();
