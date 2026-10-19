@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jonnada Kiran's Data Analyst and Business Analyst portfolio.">
+  <title>Jonnada Kiran | Data Analyst Portfolio</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      color: #19263b;
+      line-height: 1.7;
+    }
+    nav {
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 12px;
+      padding: 18px 8%; background: white;
+      border-bottom: 1px solid #e5eaf1;
+    }
+    nav strong { color: #1746a2; font-size: 19px; }
+    nav a { margin-left: 16px; text-decoration: none; color: #334155; }
+    a { color: #1746a2; }
+    .hero {
+      padding: 85px 8%; background: #10213b; color: white;
+    }
+    .hero h1 { font-size: clamp(36px, 6vw, 58px); margin: 8px 0; }
+    .hero h2 { color: #9ec5ff; font-size: 24px; }
+    .hero p { max-width: 680px; color: #e2e8f0; }
+    .btn {
+      display: inline-block; margin: 12px 10px 0 0;
+      padding: 11px 18px; border-radius: 7px;
+      background: #3b82f6; color: white; text-decoration: none;
+    }
+    .btn-outline { background: transparent; border: 1px solid white; }
+    section { padding: 48px 8%; }
+    section h2 { font-size: 29px; margin-bottom: 8px; }
+    .muted { color: #64748b; }
+    .grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px; margin-top: 24px;
+    }
+    .card {
+      background: white; border: 1px solid #e2e8f0;
+      border-radius: 12px; padding: 23px;
+    }
+    .card h3 { margin-top: 0; color: #1746a2; }
+    .tag {
+      display: inline-block; background: #eaf1ff;
+      color: #1746a2; padding: 4px 9px;
+      border-radius: 5px; margin: 4px; font-size: 13px;
+    }
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .contact { background: #eaf1ff; }
+    footer { padding: 22px; text-align: center; color: #64748b; }
+    @media(max-width:650px) {
+      .grid { grid-template-columns: 1fr; }
+      nav { padding: 16px 5%; }
+      nav a { margin-left: 8px; font-size: 14px; }
+      .hero, section { padding: 40px 6%; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <strong>Kiran | Portfolio</strong>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <p>HELLO, WELCOME TO MY PORTFOLIO</p>
+  <h1>Jonnada Kiran</h1>
+  <h2>Data Analyst | Junior Business Analyst</h2>
+  <p>
+    I turn raw data into meaningful insights through data analysis,
+    interactive dashboards, KPI reporting and business intelligence.
+    I am a B.Tech graduate from NIT Andhra Pradesh, building practical
+    skills in Power BI, SQL, Excel, Tableau and Python.
+  </p>
+  <a class="btn" href="#projects">Explore My Projects</a>
+  <a class="btn btn-outline"
+     href="https://github.com/JONNADAKIRAN"
+     target="_blank" rel="noopener">View GitHub</a>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p class="muted">
+    I am an analytical and detail-oriented graduate interested in data
+    analytics and business intelligence. My projects focus on data
+    cleaning, dashboard development, KPI tracking and communicating
+    findings clearly. I enjoy solving problems and learning new tools
+    to support data-driven decisions.
+  </p>
+  <p><strong>Education:</strong> B.Tech in Biotechnology, NIT Andhra Pradesh (2022–2026)</p>
+</section>
+
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <span class="tag">Microsoft Excel</span>
+    <span class="tag">SQL / MySQL</span>
+    <span class="tag">Power BI</span>
+    <span class="tag">DAX</span>
+    <span class="tag">Power Query</span>
+    <span class="tag">Tableau</span>
+    <span class="tag">Python</span>
+    <span class="tag">Pandas</span>
+    <span class="tag">NumPy</span>
+    <span class="tag">Data Cleaning</span>
+    <span class="tag">KPI Reporting</span>
+    <span class="tag">Data Visualization</span>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Featured Projects</h2>
+  <p class="muted">A selection of my analytics and modelling projects.</p>
+  <div class="grid">
+
+    <article class="card">
+      <h3>Power BI KPI Dashboard</h3>
+      <p>Built an interactive KPI report with data modelling,
+      relationships, Power Query and DAX-based YTD calculations.</p>
+      <span class="tag">Power BI</span><span class="tag">DAX</span>
+      <p><a href="https://github.com/JONNADAKIRAN"
+            target="_blank" rel="noopener">View on GitHub →</a></p>
+    </article>
+
+    <article class="card">
+      <h3>Tableau HR Analytics</h3>
+      <p>Explored employee demographics, salary patterns,
+      job distribution and leave balances using interactive visualizations.</p>
+      <span class="tag">Tableau</span><span class="tag">HR Analytics</span>
+      <p><a href="https://github.com/JONNADAKIRAN"
+            target="_blank" rel="noopener">View on GitHub →</a></p>
+    </article>
+
+    <article class="card">
+      <h3>Netflix Content Analysis</h3>
+      <p>Analysed movies and TV shows by content type, release year
+      and category using data cleaning and interactive visuals.</p>
+      <span class="tag">Power BI</span><span class="tag">Analysis</span>
+      <p><a href="https://github.com/JONNADAKIRAN"
+            target="_blank" rel="noopener">View on GitHub →</a></p>
+    </article>
+
+    <article class="card">
+      <h3>Chocolate Shipment Analysis</h3>
+      <p>Analysed shipment data in Excel to review business
+      performance and present key indicators for reporting.</p>
+      <span class="tag">Excel</span><span class="tag">Pivot Tables</span>
+      <p><a href="https://github.com/JONNADAKIRAN"
+            target="_blank" rel="noopener">View on GitHub →</a></p>
+    </article>
+
+    <article class="card">
+      <h3>Algal Productivity Modelling</h3>
+      <p>Developed a theoretical Python model using NASA POWER
+      climate data to explore algal productivity and carbon capture.</p>
+      <span class="tag">Python</span><span class="tag">Modelling</span>
+      <p><a href="https://github.com/JONNADAKIRAN"
+            target="_blank" rel="noopener">View on GitHub →</a></p>
+    </article>
+
+  </div>
+</section>
+
+<section>
+  <h2>Education & Achievements</h2>
+  <div class="card">
+    <p><strong>National Institute of Technology Andhra Pradesh</strong></p>
+    <p>B.Tech in Biotechnology | 2022–2026</p>
+    <p>GATE Biotechnology 2025 — All India Rank 912</p>
+    <p>Joint Secretary, Biotechnology Engineering Association</p>
+    <p>Smart India Hackathon 2024 participant</p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Let's Connect</h2>
+  <p>Open to entry-level Data Analyst and Junior Business Analyst opportunities.</p>
+  <p>Email: <a href="mailto:jonnadakiran19@gmail.com">jonnadakiran19@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/JONNADAKIRAN">JONNADAKIRAN</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/">Add your LinkedIn profile URL</a></p>
+</section>
+
+<footer>© 2026 Jonnada Kiran | Data Analyst Portfolio</footer>
+
+</body>
+</html>
