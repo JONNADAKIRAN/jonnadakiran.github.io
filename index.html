@@ -9,163 +9,171 @@
 <title>Jonnada Kiran | Data Analyst Portfolio</title>
 
 <style>
-:root {
-  --navy: #101c35;
-  --blue: #2f6fed;
-  --ink: #18243a;
-  --muted: #62718a;
-  --line: #dce5f1;
-  --bg: #f3f6fb;
-  --soft: #eaf1fc;
-  --shadow: 0 12px 34px rgba(21,42,76,.07);
+:root{
+  --navy:#101c35;
+  --blue:#3268df;
+  --ink:#1b2940;
+  --muted:#65748c;
+  --line:#dce5f1;
+  --bg:#f2f5fa;
+  --soft:#eaf0fc;
+  --white:#fff;
+  --shadow:0 14px 35px rgba(16,28,53,.08);
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 85px; }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font: 16px/1.65 "Segoe UI", Arial, sans-serif;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.7 "Segoe UI",Arial,sans-serif;
 }
-a { color: inherit; text-decoration: none; }
-.wrap { width: min(1080px, calc(100% - 40px)); margin: auto; }
-
-header {
-  position: sticky; top: 0; z-index: 10;
-  background: rgba(255,255,255,.96);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1100px,calc(100% - 44px));margin:auto}
+header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
 }
-.nav {
-  min-height: 70px;
-  display: flex; align-items: center;
-  justify-content: space-between; gap: 20px;
+.nav{
+  min-height:76px;display:flex;align-items:center;
+  justify-content:space-between;gap:22px;
 }
-.brand { font-size: 19px; font-weight: 800; color: var(--navy); }
-.brand span { color: var(--blue); }
-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 12px; font-weight: 700; color: #52617a; }
-nav a:hover { color: var(--blue); }
-.nav-cta, .btn {
-  display: inline-flex; align-items: center; justify-content: center;
-  background: var(--navy); color: white;
-  padding: 11px 16px; border-radius: 9px;
-  font-size: 13px; font-weight: 750;
-  border: 1px solid var(--navy); transition: .2s ease;
+.brand{font-size:20px;font-weight:800;color:var(--navy);white-space:nowrap}
+.brand span{color:var(--blue)}
+nav{display:flex;align-items:center;gap:17px;font-size:13px;font-weight:700;color:#52617a}
+nav a{transition:color .2s}
+nav a:hover{color:var(--blue)}
+.nav-cta,.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 17px;border-radius:10px;
+  font-size:13px;font-weight:750;
+  border:1px solid var(--navy);background:var(--navy);color:white;
+  transition:transform .22s,box-shadow .22s,background .22s;
 }
-.btn.secondary { background: white; color: var(--navy); border-color: var(--line); }
-.btn:hover, .nav-cta:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-
-section { padding: 72px 0; }
-.hero {
-  padding: 78px 0 68px;
-  background: radial-gradient(ellipse at 85% 12%, #dce8ff 0, transparent 36%), linear-gradient(180deg,#fff,#f3f6fb);
+.btn.secondary{background:white;color:var(--navy);border-color:var(--line)}
+.nav-cta:hover,.btn:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+section{padding:82px 0}
+.hero{
+  padding:85px 0 75px;
+  background:radial-gradient(ellipse at 85% 12%,#dce8ff 0,transparent 38%),
+             linear-gradient(180deg,#fff 0%,#f2f5fa 100%);
 }
-.hero-grid { display: grid; grid-template-columns: 1.45fr .55fr; gap: 48px; align-items: center; }
-.eyebrow { font-size: 11px; letter-spacing: 2px; font-weight: 850; color: var(--blue); text-transform: uppercase; }
-.hero h1 { font-size: clamp(38px,5vw,60px); line-height: 1.1; letter-spacing: -2px; color: var(--navy); margin: 13px 0; }
-.hero h1 span { color: var(--blue); }
-.hero h2 { font-size: clamp(19px,2vw,24px); color: #40516d; margin: 0 0 14px; }
-.hero p { color: var(--muted); max-width: 620px; margin: 0 0 23px; }
-.actions { display: flex; gap: 10px; flex-wrap: wrap; }
-.portrait-frame { background: white; padding: 9px; border: 1px solid var(--line); border-radius: 22px; box-shadow: var(--shadow); max-width: 245px; margin: auto; }
-.portrait-frame img { display: block; width: 100%; height: 270px; object-fit: cover; border-radius: 15px; }
-.mini-note { font-size: 12px; color: var(--muted); text-align: center; margin-top: 10px; }
-
-.section-head { max-width: 680px; margin-bottom: 27px; }
-.section-head h2 { font-size: clamp(28px,3vw,36px); letter-spacing: -1px; color: var(--navy); line-height: 1.2; margin: 8px 0 10px; }
-.section-head p { margin: 0; color: var(--muted); }
-.white-section { background: white; }
-.cards, .project-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
-.card {
-  background: white; border: 1px solid var(--line); border-radius: 16px;
-  padding: 22px; box-shadow: 0 4px 18px rgba(18,41,77,.025);
-  transition: transform .22s, box-shadow .22s, border-color .22s;
+.hero-grid{display:grid;grid-template-columns:1.45fr .55fr;gap:55px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:2px;font-weight:850;color:var(--blue);text-transform:uppercase}
+.hero h1{font-size:clamp(42px,5.2vw,66px);line-height:1.12;letter-spacing:-2px;color:var(--navy);margin:14px 0}
+.hero h1 span{color:var(--blue)}
+.hero h2{font-size:clamp(20px,2.2vw,25px);line-height:1.4;color:#40516d;margin:0 0 17px}
+.hero p{color:var(--muted);max-width:650px;margin:0 0 25px;font-size:17px}
+.actions{display:flex;gap:11px;flex-wrap:wrap}
+.portrait-frame{
+  max-width:265px;margin:auto;padding:10px;background:white;
+  border:1px solid var(--line);border-radius:25px;
+  box-shadow:var(--shadow);transition:transform .25s;
 }
-.card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: #bfd0ed; }
-.card h3 { margin: 0 0 7px; font-size: 16px; color: var(--navy); }
-.card p { margin: 0; color: var(--muted); font-size: 13px; }
-
-.skill-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
-.skill-card { background: white; border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
-.skill-card h3 { font-size: 14px; margin: 0 0 8px; color: var(--navy); }
-.skill-card p { font-size: 13px; color: var(--muted); margin: 0; }
-
-.project-number { font-size: 11px; letter-spacing: 1.5px; color: var(--blue); font-weight: 850; }
-.project h3 { font-size: 18px; margin: 8px 0; }
-.project-link { display: inline-flex; margin-top: 15px; font-size: 12px; font-weight: 800; color: var(--blue); }
-.project-link:hover { text-decoration: underline; }
-.project.center-project {
-  grid-column: 1 / -1;
-  width: calc(50% - 9px);
-  justify-self: center;
+.portrait-frame:hover{transform:translateY(-4px)}
+.portrait-frame img{
+  width:100%;height:295px;display:block;object-fit:cover;
+  border-radius:17px;background:var(--soft);
 }
-.tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
-.tag { font-size: 11px; font-weight: 750; padding: 5px 9px; border-radius: 7px; background: #edf3ff; color: #315c9e; }
-
-.timeline { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; align-items: stretch; }
-.edu { display: flex; gap: 14px; align-items: flex-start; }
-.edu-mark { flex: 0 0 40px; width: 40px; height: 40px; border-radius: 12px; background: var(--soft); display: grid; place-items: center; color: var(--blue); font-weight: 900; }
-.edu h3 { margin: 0 0 4px; font-size: 15px; }
-.edu p { font-size: 13px; margin: 0; color: var(--muted); }
-.year { font-size: 11px; font-weight: 800; color: var(--blue); margin-top: 6px; display: block; }
-.edu.center-edu { grid-column: 1 / -1; width: calc(50% - 7px); justify-self: center; }
-
-.certs { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; align-items: stretch; }
-.cert-card { padding: 14px; display: flex; flex-direction: column; }
-.cert-image {
-  height: 220px; width: 100%; display: flex; align-items: center; justify-content: center;
-  background: #f5f7fb; border-radius: 11px; overflow: hidden; border: 1px solid #edf1f7;
+.mini-note{text-align:center;color:var(--muted);font-size:13px;margin-top:13px}
+.profile-badge{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:max-content;max-width:100%;margin:14px auto 0;
+  padding:9px 15px;border:1px solid #d8e4f7;
+  border-radius:999px;background:#fff;color:#435572;
+  font-size:12px;font-weight:750;box-shadow:0 5px 18px #142b4b0a;
 }
-.cert-image img { width: 100%; height: 100%; object-fit: contain; display: block; }
-.cert-card h3 { font-size: 15px; margin: 14px 4px 5px; }
-.cert-card p { font-size: 12px; margin: 0 4px; color: var(--muted); }
-.cert-card .tag-row { margin: 12px 4px 3px; }
-.cert-card.center-card { grid-column: 1 / -1; width: calc(50% - 10px); justify-self: center; }
-.cert-card.center-card .cert-image { height: 230px; }
+.status-dot{width:8px;height:8px;border-radius:50%;background:#3bba83;box-shadow:0 0 0 4px #3bba831b}
 
-.achievement-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
-.achievement-card { display: flex; gap: 15px; align-items: center; }
-.achievement-card img { width: 105px; height: 120px; object-fit: contain; background: #f5f7fb; border: 1px solid var(--line); border-radius: 10px; flex-shrink: 0; }
-.achievement-card h3 { font-size: 15px; margin: 0 0 5px; }
-.achievement-card p { font-size: 13px; }
-.campus-card { max-width: 570px; margin: auto; }
-.campus-card img { width: 100%; height: 290px; object-fit: cover; object-position: center; border-radius: 12px; border: 1px solid var(--line); display: block; margin-bottom: 15px; }
-
-.contact-box { display: flex; align-items: center; justify-content: space-between; gap: 24px; background: var(--navy); color: white; padding: 32px; border-radius: 19px; }
-.contact-box h2 { margin: 5px 0; font-size: 28px; }
-.contact-box p { margin: 0; color: #c8d3e5; font-size: 14px; }
-.contact-links { display: flex; gap: 9px; flex-wrap: wrap; }
-.contact-links a { border: 1px solid #64738b; color: white; padding: 10px 13px; border-radius: 9px; font-size: 12px; font-weight: 750; }
-.contact-links a:hover { background: #ffffff16; }
-footer { text-align: center; padding: 25px 0; color: var(--muted); font-size: 12px; }
-
-.reveal { animation: rise .6s both; }
-@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { animation: none !important; transition: none !important; } }
-
-@media (max-width: 800px) {
-  .nav { padding: 12px 0; flex-wrap: wrap; }
-  nav { width: 100%; overflow-x: auto; flex-wrap: nowrap; gap: 15px; padding-bottom: 4px; }
-  nav a { white-space: nowrap; }
-  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
-  .portrait-frame { max-width: 205px; }
-  .portrait-frame img { height: 225px; }
-  .skill-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  .timeline { grid-template-columns: 1fr; }
-  .edu.center-edu { grid-column: auto; width: 100%; }
-  section { padding: 56px 0; }
-  .contact-box { align-items: flex-start; flex-direction: column; }
+.section-head{max-width:720px;margin-bottom:32px}
+.section-head h2{font-size:clamp(30px,3.2vw,39px);line-height:1.22;letter-spacing:-1px;color:var(--navy);margin:9px 0 11px}
+.section-head p{color:var(--muted);margin:0;font-size:16px}
+.white-section{background:white}
+.cards,.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.card{
+  background:white;border:1px solid var(--line);border-radius:17px;
+  padding:24px;box-shadow:0 4px 18px rgba(18,41,77,.025);
+  transition:transform .24s,box-shadow .24s,border-color .24s;
 }
-@media (max-width: 560px) {
-  .wrap { width: calc(100% - 28px); }
-  .hero { padding: 50px 0; }
-  .cards, .project-grid, .certs, .achievement-grid, .skill-grid { grid-template-columns: 1fr; }
-  .project.center-project, .cert-card.center-card { grid-column: auto; width: 100%; }
-  .cert-image, .cert-card.center-card .cert-image { height: 205px; }
-  .achievement-card { align-items: flex-start; }
-  .achievement-card img { width: 82px; height: 100px; }
-  .contact-box { padding: 24px; }
-  .hero h1 { letter-spacing: -1.4px; }
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#bfd0ed}
+.card h3{margin:0 0 8px;font-size:17px;line-height:1.45;color:var(--navy)}
+.card p{margin:0;color:var(--muted);font-size:14px}
+.skill-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.skill-card{background:white;border:1px solid var(--line);border-radius:15px;padding:21px;transition:.22s}
+.skill-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.skill-card h3{font-size:15px;margin:0 0 8px;color:var(--navy)}
+.skill-card p{font-size:14px;color:var(--muted);margin:0}
+.project{display:flex;flex-direction:column;align-items:flex-start}
+.project-number{font-size:11px;letter-spacing:1.6px;color:var(--blue);font-weight:850}
+.project h3{font-size:20px;margin:8px 0}
+.project-link{display:inline-flex;margin-top:auto;padding-top:18px;font-size:13px;font-weight:800;color:var(--blue)}
+.project-link:hover{text-decoration:underline}
+.project.center-project{grid-column:1/-1;width:calc(50% - 10px);justify-self:center}
+.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tag{font-size:11px;font-weight:750;padding:5px 10px;border-radius:7px;background:#edf3ff;color:#315c9e}
+.timeline{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:stretch}
+.edu{display:flex;gap:15px;align-items:flex-start}
+.edu-mark{width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:var(--soft);display:grid;place-items:center;color:var(--blue);font-weight:900}
+.edu h3{margin:0 0 5px;font-size:16px}
+.edu p{font-size:14px;margin:0;color:var(--muted)}
+.year{font-size:12px;font-weight:800;color:var(--blue);margin-top:7px;display:block}
+.edu.center-edu{grid-column:1/-1;width:calc(50% - 8px);justify-self:center}
+
+.certs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:stretch}
+.cert-card{padding:15px;display:flex;flex-direction:column}
+.cert-image{
+  height:250px;width:100%;display:flex;align-items:center;justify-content:center;
+  background:#f5f7fb;border-radius:12px;overflow:hidden;border:1px solid #e8eef7;
+}
+.cert-image img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .25s}
+.cert-image:hover img{transform:scale(1.025)}
+.cert-card h3{font-size:16px;line-height:1.45;margin:15px 4px 6px}
+.cert-card p{font-size:13px;margin:0 4px;color:var(--muted)}
+.cert-card .tag-row{margin:13px 4px 3px}
+.cert-card.center-card{grid-column:1/-1;width:calc(50% - 11px);justify-self:center}
+.cert-card.center-card .cert-image{height:250px}
+
+.achievement-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.achievement-card{padding:24px}
+.achievement-card h3{font-size:17px;margin:0 0 7px}
+.achievement-card p{font-size:14px}
+.achievement-label{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:850;letter-spacing:1px;color:var(--blue);text-transform:uppercase;margin-bottom:12px}
+.achievement-label span{width:8px;height:8px;border-radius:50%;background:var(--blue)}
+.campus-card{max-width:650px;margin:auto}
+.campus-card img{width:100%;height:320px;object-fit:cover;object-position:center;border-radius:12px;border:1px solid var(--line);display:block;margin-bottom:18px}
+.contact-box{display:flex;align-items:center;justify-content:space-between;gap:26px;background:var(--navy);color:white;padding:36px;border-radius:21px}
+.contact-box h2{margin:5px 0 8px;font-size:30px}
+.contact-box p{margin:0;color:#c8d3e5;font-size:14px}
+.contact-links{display:flex;gap:10px;flex-wrap:wrap}
+.contact-links a{border:1px solid #64738b;color:white;padding:11px 14px;border-radius:9px;font-size:13px;font-weight:750;transition:background .2s}
+.contact-links a:hover{background:#ffffff18}
+footer{text-align:center;padding:27px 0;color:var(--muted);font-size:13px}
+.reveal{animation:rise .65s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+@media(max-width:850px){
+  .nav{padding:13px 0;flex-wrap:wrap}
+  nav{width:100%;overflow-x:auto;flex-wrap:nowrap;gap:17px;padding-bottom:4px}
+  nav a{white-space:nowrap}
+  .hero-grid{grid-template-columns:1fr;gap:35px}
+  .portrait-frame{max-width:220px}
+  .portrait-frame img{height:245px}
+  .skill-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .timeline{grid-template-columns:1fr}
+  .edu.center-edu{grid-column:auto;width:100%}
+  section{padding:62px 0}
+  .contact-box{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:560px){
+  .wrap{width:calc(100% - 30px)}
+  .hero{padding:55px 0}
+  .hero h1{letter-spacing:-1.4px}
+  .hero p{font-size:15px}
+  .cards,.project-grid,.certs,.achievement-grid,.skill-grid{grid-template-columns:1fr}
+  .project.center-project,.cert-card.center-card{grid-column:auto;width:100%}
+  .cert-image,.cert-card.center-card .cert-image{height:220px}
+  .contact-box{padding:25px}
+  .campus-card img{height:240px}
 }
 </style>
 </head>
@@ -206,6 +214,7 @@ footer { text-align: center; padding: 25px 0; color: var(--muted); font-size: 12
         <img src="./profile.jpg" alt="Jonnada Kiran profile photo">
       </div>
       <div class="mini-note">Hyderabad, Telangana, India</div>
+      <div class="profile-badge"><span class="status-dot"></span> Analytics &amp; Business Insights · Learning · Building · Improving</div>
     </div>
   </div>
 </section>
@@ -214,12 +223,18 @@ footer { text-align: center; padding: 25px 0; color: var(--muted); font-size: 12
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">About me</div>
-      <h2>Turning data into clear decisions</h2>
-      <p>I enjoy organising information, identifying patterns and presenting findings in a way that helps teams understand performance. I’m building practical analytics skills through dashboard projects and continuous learning.</p>
+      <h2>Curious about data. Focused on insights.</h2>
+      <p>A little about my background and the work I want to do.</p>
     </div>
     <div class="cards">
-      <article class="card"><h3>What I bring</h3><p>Structured problem-solving, attention to detail, documentation, collaboration and a willingness to learn new tools.</p></article>
-      <article class="card"><h3>Career focus</h3><p>Entry-level Data Analyst, Junior Business Analyst, BI reporting and dashboard development opportunities.</p></article>
+      <article class="card">
+        <h3>My Profile</h3>
+        <p>I completed my B.Tech in Biotechnology at the National Institute of Technology Andhra Pradesh and am building my career in data analytics and business analysis. Through dashboard and analysis projects, I have practised data cleaning, trend analysis, KPI reporting and presenting information in clear visual formats.</p>
+      </article>
+      <article class="card">
+        <h3>What I Bring</h3>
+        <p>Analytical thinking, attention to detail, documentation, collaboration and a willingness to learn. I am looking for an entry-level opportunity where I can apply these strengths and continue developing my technical skills.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -227,17 +242,17 @@ footer { text-align: center; padding: 25px 0; color: var(--muted); font-size: 12
 <section class="white-section" id="skills">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Toolkit</div>
-      <h2>Skills & tools</h2>
-      <p>Core tools and techniques for data analysis and reporting.</p>
+      <div class="eyebrow">Technical skills</div>
+      <h2>Tools I use to work with data</h2>
+      <p>My current skills across analysis, visualisation and reporting.</p>
     </div>
     <div class="skill-grid">
-      <article class="skill-card"><h3>Data analysis</h3><p>Excel, Pivot Tables, data cleaning, trend analysis, KPI reporting</p></article>
-      <article class="skill-card"><h3>BI & visualisation</h3><p>Power BI, Tableau, dashboard development, charts and storytelling</p></article>
-      <article class="skill-card"><h3>Data preparation</h3><p>Power Query, data transformation, data modelling and relationships</p></article>
-      <article class="skill-card"><h3>Power BI</h3><p>DAX measures, YTD calculations, KPIs and interactive reports</p></article>
-      <article class="skill-card"><h3>SQL / MySQL</h3><p>SELECT, filtering, grouping, joins, aggregate functions and subqueries</p></article>
-      <article class="skill-card"><h3>Python</h3><p>Python fundamentals, Pandas and NumPy</p></article>
+      <article class="skill-card"><h3>Data Analysis</h3><p>Excel, Pivot Tables, Data Cleaning, Trend Analysis, KPI Reporting</p></article>
+      <article class="skill-card"><h3>Business Intelligence</h3><p>Power BI, Tableau, Dashboards, Visualisation</p></article>
+      <article class="skill-card"><h3>Power BI</h3><p>Power Query, DAX, Data Modelling, Relationships, YTD Calculations</p></article>
+      <article class="skill-card"><h3>SQL &amp; Databases</h3><p>SQL, MySQL, Joins, Subqueries, Aggregations</p></article>
+      <article class="skill-card"><h3>Python</h3><p>Python, Pandas, NumPy, Matplotlib</p></article>
+      <article class="skill-card"><h3>Professional Skills</h3><p>Documentation, Problem Solving, Attention to Detail, Teamwork</p></article>
     </div>
   </div>
 </section>
@@ -246,42 +261,46 @@ footer { text-align: center; padding: 25px 0; color: var(--muted); font-size: 12
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Selected work</div>
-      <h2>Projects & practical learning</h2>
+      <h2>Projects &amp; practical learning</h2>
       <p>Examples of dashboarding, reporting, content analysis and modelling.</p>
     </div>
     <div class="project-grid">
       <article class="card project">
-        <div class="project-number">PROJECT 01</div><h3>Power BI KPI Dashboard</h3>
+        <div class="project-number">PBI · BUSINESS INTELLIGENCE</div>
+        <h3>Power BI KPI Dashboard</h3>
         <p>A dashboard project focused on presenting key performance indicators and making results easier to interpret.</p>
         <div class="tag-row"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">KPIs</span></div>
-        <a class="project-link" href="https://github.com/JONNADAKIRAN" target="_blank" rel="noopener">Browse GitHub profile ↗</a>
+        <a class="project-link" href="https://github.com/JONNADAKIRAN" target="_blank" rel="noopener">Browse project repositories ↗</a>
       </article>
       <article class="card project">
-        <div class="project-number">PROJECT 02</div><h3>Tableau HR Analytics Dashboard</h3>
+        <div class="project-number">TBL · PEOPLE ANALYTICS</div>
+        <h3>Tableau HR Analytics Dashboard</h3>
         <p>An HR dashboard project designed to organise workforce information and present metrics through visualisations.</p>
         <div class="tag-row"><span class="tag">Tableau</span><span class="tag">HR Analytics</span><span class="tag">Charts</span></div>
-        <a class="project-link" href="https://github.com/JONNADAKIRAN" target="_blank" rel="noopener">Browse GitHub profile ↗</a>
+        <a class="project-link" href="https://github.com/JONNADAKIRAN" target="_blank" rel="noopener">Browse project repositories ↗</a>
       </article>
       <article class="card project">
-        <div class="project-number">PROJECT 03</div><h3>Netflix Content Analysis</h3>
+        <div class="project-number">NFX · CONTENT ANALYTICS</div>
+        <h3>Netflix Content Analysis</h3>
         <p>An analysis project exploring content attributes and patterns through data preparation and visual summaries.</p>
         <div class="tag-row"><span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">Analysis</span></div>
-        <a class="project-link" href="https://github.com/JONNADAKIRAN" target="_blank" rel="noopener">Browse GitHub profile ↗</a>
+        <a class="project-link" href="https://github.com/JONNADAKIRAN" target="_blank" rel="noopener">Browse project repositories ↗</a>
       </article>
       <article class="card project">
-        <div class="project-number">PROJECT 04</div><h3>Chocolate Shipment Analysis</h3>
+        <div class="project-number">EXL · SALES ANALYTICS</div>
+        <h3>Chocolate Shipment Analysis</h3>
         <p>A shipment analysis dashboard concept focused on summarising sales and shipment information for performance reporting.</p>
         <div class="tag-row"><span class="tag">Excel</span><span class="tag">Power BI</span><span class="tag">Reporting</span></div>
-        <a class="project-link" href="https://github.com/JONNADAKIRAN" target="_blank" rel="noopener">Browse GitHub profile ↗</a>
+        <a class="project-link" href="https://github.com/JONNADAKIRAN" target="_blank" rel="noopener">Browse project repositories ↗</a>
       </article>
       <article class="card project center-project">
-        <div class="project-number">RESEARCH & MODELLING</div><h3>Algal Productivity & Carbon Capture</h3>
+        <div class="project-number">PY · RESEARCH &amp; MODELLING</div>
+        <h3>Algal Productivity &amp; Carbon Capture</h3>
         <p>A theoretical modelling project using regional climate data to explore microalgae productivity and potential carbon capture.</p>
         <div class="tag-row"><span class="tag">Python</span><span class="tag">Climate Data</span><span class="tag">Modelling</span></div>
-        <a class="project-link" href="https://github.com/JONNADAKIRAN" target="_blank" rel="noopener">Browse GitHub profile ↗</a>
+        <a class="project-link" href="https://github.com/JONNADAKIRAN" target="_blank" rel="noopener">Browse project repositories ↗</a>
       </article>
     </div>
-    <p style="font-size:12px;color:var(--muted);margin-top:15px">Project links currently open my GitHub profile. Replace them with individual repository links when confirmed.</p>
   </div>
 </section>
 
@@ -313,7 +332,7 @@ footer { text-align: center; padding: 25px 0; color: var(--muted); font-size: 12
     <div class="section-head">
       <div class="eyebrow">Continuous learning</div>
       <h2>NPTEL Certifications</h2>
-      <p>Academic certificates presented in a consistent layout. Select a certificate to view it larger.</p>
+      <p>Selected certificates from my academic learning.</p>
     </div>
     <div class="certs">
       <article class="card cert-card">
@@ -332,7 +351,7 @@ footer { text-align: center; padding: 25px 0; color: var(--muted); font-size: 12
         <a class="cert-image" href="./nptel-plant-bioprocessing.png" target="_blank" rel="noopener"><img src="./nptel-plant-bioprocessing.png" alt="NPTEL Plant Cell Bioprocessing certificate"></a>
         <h3>Plant Cell Bioprocessing</h3>
         <p>IIT Madras · Jul–Sep 2025 · Score: 58%</p>
-        <div class="tag-row"><span class="tag">NPTEL</span></div>
+        <div class="tag-row"><span class="tag">NPTEL</span><span class="tag">Bioprocessing</span></div>
       </article>
     </div>
   </div>
@@ -342,21 +361,21 @@ footer { text-align: center; padding: 25px 0; color: var(--muted); font-size: 12
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Highlights</div>
-      <h2>Achievements & participation</h2>
-      <p>A concise selection of academic recognition and participation.</p>
+      <h2>Achievements &amp; participation</h2>
+      <p>Academic milestones and participation highlights.</p>
     </div>
     <div class="achievement-grid">
       <article class="card achievement-card">
-        <img src="./gate-award.png" alt="GATE Biotechnology award plaque">
-        <div><h3>GATE Biotechnology 2025</h3><p>Qualified GATE BT 2025; recognised at NIT Andhra Pradesh.</p><div class="tag-row"><span class="tag">GATE BT</span><span class="tag">2025</span></div></div>
+        <div class="achievement-label"><span></span> Academic achievement</div>
+        <h3>GATE Biotechnology 2025</h3>
+        <p>Qualified GATE BT 2025 and received recognition at NIT Andhra Pradesh.</p>
+        <div class="tag-row"><span class="tag">GATE BT</span><span class="tag">2025</span></div>
       </article>
       <article class="card achievement-card">
-        <img src="./sih-certificate.png" alt="Smart India Hackathon certificate">
-        <div><h3>Smart India Hackathon 2024</h3><p>Certificate of Appreciation for participation in the NIT Andhra Pradesh internal hackathon.</p><div class="tag-row"><span class="tag">SIH 2024</span></div></div>
-      </article>
-      <article class="card achievement-card">
-        <div class="edu-mark">Py</div>
-        <div><h3>Complete Python Bootcamp</h3><p>Udemy · 22-hour course · Dec 2024.</p><div class="tag-row"><span class="tag">Python</span><span class="tag">Online learning</span></div></div>
+        <div class="achievement-label"><span></span> Innovation &amp; teamwork</div>
+        <h3>Smart India Hackathon 2024</h3>
+        <p>Participated in the internal hackathon at NIT Andhra Pradesh on 11 September 2024.</p>
+        <div class="tag-row"><span class="tag">SIH 2024</span><span class="tag">Participation</span></div>
       </article>
     </div>
   </div>
@@ -365,13 +384,14 @@ footer { text-align: center; padding: 25px 0; color: var(--muted); font-size: 12
 <section id="leadership">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Campus involvement</div>
-      <h2>Leadership & activities</h2>
+      <div class="eyebrow">Beyond academics</div>
+      <h2>Leadership &amp; campus activities</h2>
+      <p>Student involvement and campus memories from NIT Andhra Pradesh.</p>
     </div>
     <article class="card campus-card">
       <img src="./vulcanzy-event.jpeg" alt="Vulcanzy 2K26 campus group photo">
       <h3>Joint Secretary — Biotechnology Engineering Association</h3>
-      <p>National Institute of Technology Andhra Pradesh. Supported student engagement and department activities and participated in campus events including Vulcanzy 2K26.</p>
+      <p>Contributed to student association activities, coordination and collaboration. This role helped develop communication, teamwork and organisational skills.</p>
     </article>
   </div>
 </section>
@@ -380,21 +400,21 @@ footer { text-align: center; padding: 25px 0; color: var(--muted); font-size: 12
   <div class="wrap">
     <div class="contact-box">
       <div>
-        <div class="eyebrow" style="color:#9dbbff">Let’s connect</div>
-        <h2>Contact</h2>
-        <p>Open to entry-level Data Analyst and Junior Business Analyst opportunities.</p>
-        <p style="margin-top:8px">Hyderabad, Telangana, India · jonnadakiran19@gmail.com</p>
+        <div class="eyebrow" style="color:#a9c4ff">Contact</div>
+        <h2>Let's connect professionally.</h2>
+        <p>I am interested in entry-level Data Analyst and Junior Business Analyst opportunities where I can apply my skills, learn from experienced teams and contribute to meaningful projects.</p>
+        <p style="margin-top:10px">Hyderabad, Telangana, India · jonnadakiran19@gmail.com</p>
       </div>
       <div class="contact-links">
-        <a href="mailto:jonnadakiran19@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/jonnada-kiran-33bab5279/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/JONNADAKIRAN" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:jonnadakiran19@gmail.com">Email Me ↗</a>
+        <a href="https://www.linkedin.com/in/jonnada-kiran-33bab5279/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/JONNADAKIRAN" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
     </div>
   </div>
 </section>
 </main>
 
-<footer><div class="wrap">© 2026 Jonnada Kiran · Portfolio</div></footer>
+<footer><div class="wrap">© 2026 Jonnada Kiran · Data · Clarity · Impact</div></footer>
 </body>
 </html>
