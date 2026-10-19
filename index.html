@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Jonnada Kiran | Data Analyst Portfolio</title>
-  <meta name="description" content="Portfolio of Jonnada Kiran, aspiring Data Analyst and Junior Business Analyst skilled in Power BI, SQL, Excel, Tableau and Python.">
   <meta name="theme-color" content="#14243a">
+  <meta name="description" content="Jonnada Kiran's portfolio featuring data analytics projects, Power BI, SQL, Excel, Tableau, Python, academic achievements and leadership.">
+  <title>Jonnada Kiran | Data Analyst Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,46 +15,34 @@
   <style>
     :root {
       --navy: #14243a;
-      --navy-light: #203957;
       --blue: #3169bd;
-      --blue-hover: #24549c;
+      --blue-dark: #24549c;
       --ink: #19283c;
       --muted: #617087;
-      --background: #f1f5fa;
-      --surface: #ffffff;
+      --bg: #f1f5fa;
+      --white: #ffffff;
       --border: #dce5f0;
-      --pale-blue: #e6eef9;
-      --shadow: 0 12px 35px rgba(20, 36, 58, 0.07);
-      --radius: 18px;
+      --pale: #eaf0f8;
+      --shadow: 0 12px 35px rgba(20,36,58,.08);
+      --radius: 17px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 90px;
+      scroll-padding-top: 85px;
     }
 
     body {
       font-family: "DM Sans", sans-serif;
-      background: var(--background);
+      background: var(--bg);
       color: var(--ink);
       line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button, a {
-      -webkit-tap-highlight-color: transparent;
-    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
 
     a:focus-visible, button:focus-visible {
       outline: 3px solid #79a8f0;
@@ -63,38 +50,21 @@
     }
 
     .container {
-      width: min(1120px, calc(100% - 44px));
+      width: min(1120px, calc(100% - 40px));
       margin: 0 auto;
     }
 
-    .section {
-      padding: 88px 0;
-    }
+    .section { padding: 82px 0; }
 
     .section-alt {
       background: #eaf0f8;
-      border-top: 1px solid #e2e9f3;
-      border-bottom: 1px solid #e2e9f3;
-    }
-
-    .section-heading {
-      max-width: 680px;
-      margin-bottom: 34px;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      color: var(--blue);
-      font-size: 0.76rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
+      border-top: 1px solid #e0e8f2;
+      border-bottom: 1px solid #e0e8f2;
     }
 
     h1, h2, h3, .brand {
       font-family: "Manrope", sans-serif;
-      line-height: 1.2;
+      line-height: 1.25;
     }
 
     h2 {
@@ -103,9 +73,23 @@
       margin-bottom: 12px;
     }
 
-    .section-heading p,
-    .muted {
-      color: var(--muted);
+    h3 { font-size: 1.08rem; }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 32px;
+    }
+
+    .section-heading p, .muted { color: var(--muted); }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      font-size: .76rem;
+      font-weight: 800;
+      margin-bottom: 12px;
     }
 
     /* Navigation */
@@ -113,65 +97,54 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255,255,255,.96);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
 
     .nav-inner {
-      min-height: 74px;
+      min-height: 72px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 20px;
     }
 
     .brand {
-      font-size: 1.22rem;
+      font-size: 1.2rem;
       font-weight: 800;
-      letter-spacing: -0.5px;
       white-space: nowrap;
     }
 
-    .brand span {
-      color: var(--blue);
-    }
+    .brand span, .hero h1 span { color: var(--blue); }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 20px;
     }
 
     .nav-links a {
       color: #4c5d74;
-      font-size: 0.91rem;
-      font-weight: 600;
-      transition: color 0.2s ease;
+      font-size: .85rem;
+      font-weight: 700;
     }
 
-    .nav-links a:hover {
-      color: var(--blue);
-    }
+    .nav-links a:hover { color: var(--blue); }
 
-    .nav-cta {
-      padding: 10px 17px;
+    .nav-links .nav-cta {
       background: var(--navy);
-      color: white !important;
+      color: white;
+      padding: 9px 14px;
       border-radius: 9px;
-    }
-
-    .nav-cta:hover {
-      background: var(--blue);
     }
 
     .menu-toggle {
       display: none;
-      border: 1px solid var(--border);
       background: white;
-      color: var(--navy);
+      border: 1px solid var(--border);
       border-radius: 9px;
-      padding: 8px 12px;
+      padding: 7px 12px;
       font-size: 1.2rem;
       cursor: pointer;
     }
@@ -180,302 +153,222 @@
     .hero {
       position: relative;
       overflow: hidden;
-      padding: 86px 0 92px;
+      padding: 82px 0 90px;
       background:
-        radial-gradient(ellipse at 80% 20%, rgba(104, 149, 213, 0.17), transparent 36%),
-        linear-gradient(125deg, #e7eef8 0%, #f4f7fc 52%, #eaf1fb 100%);
-      border-bottom: 1px solid #dfe7f1;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 340px;
-      height: 340px;
-      right: -170px;
-      bottom: -220px;
-      border: 1px solid rgba(49, 105, 189, 0.18);
-      border-radius: 50%;
-      box-shadow:
-        0 0 0 35px rgba(49, 105, 189, 0.035),
-        0 0 0 75px rgba(49, 105, 189, 0.025);
-      pointer-events: none;
+        radial-gradient(ellipse at 85% 15%, rgba(90,145,220,.19), transparent 35%),
+        linear-gradient(125deg, #e5edf8, #f5f8fc 55%, #eaf1fb);
+      border-bottom: 1px solid var(--border);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.45fr 0.75fr;
+      grid-template-columns: 1.4fr .75fr;
       align-items: center;
-      gap: 75px;
-      position: relative;
-      z-index: 1;
+      gap: 70px;
     }
 
     .hero-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
       color: var(--blue);
-      font-weight: 800;
-      font-size: 0.76rem;
+      font-size: .76rem;
       letter-spacing: 1.8px;
-      text-transform: uppercase;
-      margin-bottom: 22px;
-    }
-
-    .hero-label::before {
-      content: "";
-      width: 24px;
-      height: 2px;
-      background: var(--blue);
-    }
-
-    h1 {
-      font-size: clamp(2.7rem, 5.5vw, 4.6rem);
-      letter-spacing: -3px;
       font-weight: 800;
-      margin-bottom: 17px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
     }
 
-    h1 span {
-      color: var(--blue);
+    .hero h1 {
+      font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+      letter-spacing: -3px;
+      margin-bottom: 15px;
     }
 
     .hero-role {
-      font-size: clamp(1.15rem, 2.3vw, 1.55rem);
-      font-weight: 700;
-      margin-bottom: 20px;
       color: var(--navy);
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      font-weight: 700;
+      margin-bottom: 18px;
     }
 
     .hero-description {
       max-width: 650px;
       color: #566880;
-      font-size: 1.04rem;
       line-height: 1.9;
-      margin-bottom: 28px;
+      margin-bottom: 25px;
     }
 
     .button-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 25px;
+      gap: 11px;
+      margin-bottom: 22px;
     }
 
     .btn {
       display: inline-flex;
-      align-items: center;
       justify-content: center;
-      gap: 8px;
-      min-height: 48px;
-      padding: 12px 19px;
-      border-radius: 10px;
-      font-family: inherit;
-      font-size: 0.91rem;
-      font-weight: 700;
+      align-items: center;
+      gap: 7px;
+      padding: 12px 17px;
+      min-height: 46px;
       border: 1px solid transparent;
+      border-radius: 9px;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: .88rem;
       cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease,
-                  background 0.2s ease, border-color 0.2s ease;
+      transition: transform .2s, box-shadow .2s, background .2s;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-    }
+    .btn:hover { transform: translateY(-2px); }
 
     .btn-primary {
       background: var(--blue);
       color: white;
-      box-shadow: 0 6px 15px rgba(49, 105, 189, 0.16);
+      box-shadow: 0 5px 15px rgba(49,105,189,.17);
     }
 
-    .btn-primary:hover {
-      background: var(--blue-hover);
-      box-shadow: 0 9px 22px rgba(49, 105, 189, 0.22);
-    }
+    .btn-primary:hover { background: var(--blue-dark); }
 
     .btn-secondary {
-      background: rgba(255, 255, 255, 0.8);
-      border-color: #cbd8e8;
+      background: white;
       color: var(--navy);
+      border-color: #cbd8e8;
     }
 
-    .btn-secondary:hover {
-      background: white;
-      border-color: #8daedb;
-    }
+    .btn-secondary:hover { border-color: #8daedb; }
 
     .social-links {
       display: flex;
-      flex-wrap: wrap;
       gap: 22px;
+      flex-wrap: wrap;
     }
 
     .social-links a {
       color: #315f9f;
       font-weight: 700;
-      font-size: 0.93rem;
-    }
-
-    .social-links a:hover {
-      text-decoration: underline;
+      font-size: .92rem;
     }
 
     .portrait-wrap {
-      position: relative;
-      width: min(100%, 330px);
+      width: min(100%, 320px);
       margin-left: auto;
+      position: relative;
     }
 
     .portrait-frame {
-      position: relative;
-      padding: 10px;
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(255, 255, 255, 0.95);
-      border-radius: 25px;
-      box-shadow: 0 22px 55px rgba(20, 36, 58, 0.15);
-      transform: rotate(1.2deg);
-      transition: transform 0.35s ease;
+      padding: 9px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 23px;
+      box-shadow: 0 22px 50px rgba(20,36,58,.14);
+      transform: rotate(1deg);
+      transition: transform .3s;
     }
 
-    .portrait-frame:hover {
-      transform: rotate(0deg) translateY(-4px);
-    }
+    .portrait-frame:hover { transform: rotate(0) translateY(-4px); }
 
     .portrait-frame img {
       display: block;
       width: 100%;
-      aspect-ratio: 4 / 5;
+      aspect-ratio: 4/5;
       object-fit: cover;
       object-position: center top;
-      border-radius: 17px;
+      border-radius: 16px;
       background: #e0e7f1;
     }
 
-    .portrait-caption {
+    .photo-caption {
       position: absolute;
-      bottom: -17px;
-      left: -28px;
-      padding: 13px 17px;
+      bottom: -15px;
+      left: -22px;
       background: white;
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 11px;
+      padding: 11px 15px;
       box-shadow: var(--shadow);
-      font-size: 0.82rem;
       font-weight: 700;
-      color: var(--navy);
-      transform: rotate(-1.5deg);
+      font-size: .8rem;
     }
 
-    .portrait-caption span {
+    .photo-caption small {
       display: block;
       color: var(--muted);
-      font-size: 0.73rem;
       font-weight: 500;
     }
 
-    /* About */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 25px;
-      align-items: stretch;
-    }
-
-    .panel {
-      background: var(--surface);
+    /* General cards */
+    .panel, .skill-card, .project-card, .timeline-card,
+    .certificate-card, .activity-card {
+      background: white;
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 29px;
-      box-shadow: 0 5px 20px rgba(20, 36, 58, 0.025);
+      transition: transform .22s, box-shadow .22s, border-color .22s;
     }
 
-    .panel p {
-      color: var(--muted);
-      margin-top: 10px;
+    .skill-card:hover, .project-card:hover, .timeline-card:hover,
+    .certificate-card:hover, .activity-card:hover {
+      transform: translateY(-4px);
+      border-color: #a9c1e4;
+      box-shadow: var(--shadow);
     }
 
-    .highlight-list {
+    .panel { padding: 27px; }
+    .panel p { color: var(--muted); margin-top: 12px; }
+
+    .about-grid {
       display: grid;
-      gap: 15px;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 22px;
     }
 
-    .highlight-item {
+    .highlights { display: grid; gap: 17px; margin-top: 20px; }
+
+    .highlight {
       display: flex;
-      gap: 13px;
       align-items: flex-start;
+      gap: 12px;
     }
 
     .highlight-icon {
+      flex: 0 0 38px;
+      height: 38px;
       display: grid;
       place-items: center;
-      flex: 0 0 39px;
-      width: 39px;
-      height: 39px;
-      background: var(--pale-blue);
+      background: var(--pale);
       color: var(--blue);
-      border-radius: 11px;
+      border-radius: 10px;
       font-weight: 800;
     }
 
-    .highlight-item strong {
-      display: block;
-      margin-bottom: 2px;
-      font-size: 0.94rem;
-    }
-
-    .highlight-item small {
+    .highlight small {
       display: block;
       color: var(--muted);
       line-height: 1.55;
-      font-size: 0.84rem;
     }
 
     /* Skills */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      gap: 17px;
     }
 
-    .skill-card {
-      background: white;
-      padding: 24px;
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      transition: transform 0.22s ease, box-shadow 0.22s ease,
-                  border-color 0.22s ease;
-    }
-
-    .skill-card:hover,
-    .project-card:hover,
-    .timeline-card:hover {
-      transform: translateY(-4px);
-      border-color: #a9c1e4;
-      box-shadow: var(--shadow);
-    }
-
-    .skill-card h3 {
-      font-size: 1.04rem;
-      margin-bottom: 14px;
-    }
+    .skill-card { padding: 23px; }
+    .skill-card h3 { margin-bottom: 14px; }
 
     .tag-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 7px;
     }
 
     .tag {
-      display: inline-flex;
-      align-items: center;
       background: #edf3fb;
-      color: #34577f;
       border: 1px solid #dce7f5;
+      color: #34577f;
       border-radius: 7px;
-      padding: 5px 10px;
-      font-size: 0.79rem;
+      padding: 5px 9px;
+      font-size: .77rem;
       font-weight: 600;
     }
 
@@ -483,899 +376,780 @@
     .project-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
+      gap: 19px;
     }
 
     .project-card {
       display: flex;
       flex-direction: column;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 26px;
-      min-height: 255px;
-      transition: transform 0.22s ease, box-shadow 0.22s ease,
-                  border-color 0.22s ease;
-    }
-
-    .project-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 19px;
+      padding: 25px;
     }
 
     .project-icon {
       display: grid;
       place-items: center;
-      width: 48px;
-      height: 48px;
-      background: var(--pale-blue);
-      border: 1px solid #d8e5f6;
-      border-radius: 13px;
+      width: 46px;
+      height: 46px;
+      background: var(--pale);
       color: var(--blue);
-      font-family: "Manrope", sans-serif;
-      font-size: 0.9rem;
+      border-radius: 12px;
       font-weight: 800;
+      margin-bottom: 17px;
     }
 
     .project-type {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: #62758e;
+      color: #687b92;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
+      letter-spacing: .8px;
+      font-size: .72rem;
+      font-weight: 800;
+      margin-bottom: 7px;
     }
 
-    .project-card h3 {
-      font-size: 1.13rem;
-      margin-bottom: 10px;
-    }
+    .project-card h3 { margin-bottom: 10px; }
 
     .project-card p {
       color: var(--muted);
-      font-size: 0.91rem;
-      margin-bottom: 19px;
-      flex-grow: 1;
+      font-size: .9rem;
+      margin-bottom: 16px;
     }
 
+    .project-card .tag-list { margin-top: auto; }
+
     .project-footer {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding-top: 15px;
       border-top: 1px solid #edf1f6;
+      margin-top: 17px;
+      padding-top: 14px;
     }
 
     .project-link {
       color: var(--blue);
-      font-size: 0.86rem;
+      font-size: .86rem;
       font-weight: 800;
     }
 
-    .project-link:hover {
-      text-decoration: underline;
-    }
+    .project-link:hover { text-decoration: underline; }
 
-    /* Education and experience */
+    /* Education / experience */
     .timeline {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
+      gap: 18px;
     }
 
-    .timeline-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 15px;
-      padding: 26px;
-      transition: transform 0.22s ease, box-shadow 0.22s ease,
-                  border-color 0.22s ease;
-    }
+    .timeline-card { padding: 24px; }
 
     .timeline-date {
       display: inline-block;
       background: #edf3fb;
       color: #345d91;
+      padding: 5px 9px;
       border-radius: 7px;
-      padding: 5px 10px;
-      font-size: 0.78rem;
+      font-size: .77rem;
       font-weight: 800;
       margin-bottom: 13px;
     }
 
-    .timeline-card h3 {
-      font-size: 1.08rem;
-      margin-bottom: 7px;
-    }
-
-    .timeline-card .institution {
+    .institution {
       color: var(--blue);
       font-weight: 700;
-      font-size: 0.89rem;
-      margin-bottom: 11px;
+      font-size: .89rem;
+      margin: 7px 0 10px;
     }
 
-    .timeline-card p,
-    .timeline-card li {
+    .timeline-card p, .timeline-card li {
       color: var(--muted);
-      font-size: 0.89rem;
+      font-size: .89rem;
     }
 
-    .timeline-card ul {
-      padding-left: 19px;
-      margin-top: 10px;
-    }
+    .timeline-card ul { padding-left: 19px; }
 
-    .timeline-card li + li {
-      margin-top: 6px;
-    }
-
-    .achievement-grid {
+    /* Certificates */
+    .certificate-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 20px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
     }
 
-    .achievement-card {
-      background: rgba(255, 255, 255, 0.75);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 22px;
+    .certificate-card { overflow: hidden; }
+
+    .certificate-image {
+      height: 225px;
+      display: grid;
+      place-items: center;
+      padding: 10px;
+      background: #f6f8fb;
+      border-bottom: 1px solid var(--border);
     }
 
-    .achievement-card h3 {
-      font-size: 0.98rem;
-      margin-bottom: 8px;
+    .certificate-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
-    .achievement-card p {
+    .certificate-content { padding: 21px; }
+
+    .certificate-content h3 {
+      font-size: 1rem;
+      margin-bottom: 9px;
+    }
+
+    .certificate-content p {
       color: var(--muted);
-      font-size: 0.87rem;
+      font-size: .86rem;
     }
+
+    .certificate-content .tag-list { margin-top: 13px; }
+
+    .award-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .award-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .award-card img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+      background: #f6f8fb;
+      border-radius: 10px;
+      margin-bottom: 17px;
+    }
+
+    .award-card h3 { margin-bottom: 8px; }
+    .award-card p { color: var(--muted); font-size: .9rem; }
+
+    .activity-card { overflow: hidden; }
+
+    .activity-card img {
+      display: block;
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      object-position: center;
+      background: #e4eaf3;
+    }
+
+    .activity-content { padding: 21px; }
+    .activity-content p { color: var(--muted); font-size: .9rem; margin-top: 8px; }
 
     /* Contact */
     .contact-panel {
       background:
-        radial-gradient(ellipse at 95% 0%, rgba(108, 153, 218, 0.2), transparent 35%),
+        radial-gradient(ellipse at 95% 0%, rgba(108,153,218,.2), transparent 35%),
         linear-gradient(130deg, #e4edf9, #f7f9fd);
       border: 1px solid #d4e0ef;
       border-radius: 22px;
-      padding: clamp(28px, 5vw, 52px);
+      padding: clamp(26px, 5vw, 48px);
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 32px;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 28px;
       align-items: center;
     }
 
-    .contact-panel h2 {
-      margin-bottom: 14px;
-    }
-
-    .contact-panel p {
-      color: var(--muted);
-      max-width: 560px;
-    }
-
-    .contact-details {
-      display: grid;
-      gap: 13px;
-      overflow-wrap: anywhere;
-    }
-
-    .contact-details a {
-      color: #2b5c9f;
-      font-weight: 700;
-      font-size: 0.92rem;
-    }
-
-    .contact-details a:hover {
-      text-decoration: underline;
-    }
+    .contact-panel p { color: var(--muted); }
+    .contact-details { display: grid; gap: 12px; overflow-wrap: anywhere; }
+    .contact-details a { color: #2b5c9f; font-weight: 700; font-size: .9rem; }
 
     footer {
       background: var(--navy);
       color: #dbe5f2;
-      padding: 25px 0;
+      padding: 23px 0;
     }
 
     .footer-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 16px;
+      gap: 15px;
       flex-wrap: wrap;
-      font-size: 0.83rem;
+      font-size: .82rem;
     }
 
-    .footer-inner a {
-      color: white;
-      font-weight: 700;
-    }
+    .footer-inner a { color: white; font-weight: 700; }
 
-    /* Scroll reveal */
+    /* Subtle reveal */
     .reveal {
       opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.65s ease, transform 0.65s ease;
+      transform: translateY(15px);
+      transition: opacity .6s ease, transform .6s ease;
     }
 
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
     @media (max-width: 900px) {
-      .hero-grid {
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 38px;
-      }
-
-      .skills-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .achievement-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .nav-links {
-        gap: 16px;
-      }
+      .hero-grid { gap: 35px; }
+      .nav-links { gap: 12px; }
+      .nav-links a { font-size: .79rem; }
+      .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 680px) {
-      .container {
-        width: min(100% - 32px, 540px);
-      }
+      .container { width: calc(100% - 32px); }
+      .section { padding: 60px 0; }
 
-      .section {
-        padding: 63px 0;
-      }
-
-      .nav-inner {
-        min-height: 66px;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
+      .nav-inner { min-height: 65px; }
+      .menu-toggle { display: block; }
 
       .nav-links {
         display: none;
         position: absolute;
-        top: 65px;
+        top: 64px;
         left: 0;
         right: 0;
-        padding: 18px 22px 22px;
+        padding: 15px 22px 22px;
         background: white;
         border-bottom: 1px solid var(--border);
-        box-shadow: 0 12px 20px rgba(20, 36, 58, 0.08);
+        box-shadow: var(--shadow);
         flex-direction: column;
         align-items: stretch;
         gap: 0;
       }
 
-      .nav-links.open {
-        display: flex;
-      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 11px 3px; font-size: .9rem; }
+      .nav-links .nav-cta { text-align: center; margin-top: 7px; }
 
-      .nav-links a {
-        padding: 12px 4px;
-      }
-
-      .nav-links .nav-cta {
-        text-align: center;
-        margin-top: 8px;
-      }
-
-      .hero {
-        padding: 60px 0 68px;
-      }
-
-      .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 42px;
-      }
-
-      h1 {
-        font-size: clamp(2.65rem, 12vw, 3.7rem);
-        letter-spacing: -2px;
-      }
-
-      .hero-description {
-        font-size: 0.98rem;
-      }
-
-      .portrait-wrap {
-        width: min(78%, 290px);
-        margin: 0 auto 15px;
-      }
-
-      .portrait-caption {
-        left: -15px;
-      }
-
-      .about-grid,
-      .skills-grid,
-      .project-grid,
-      .timeline,
-      .achievement-grid,
-      .contact-panel {
+      .hero { padding: 56px 0 65px; }
+      .hero-grid, .about-grid, .skills-grid, .project-grid,
+      .timeline, .certificate-grid, .award-grid, .contact-panel {
         grid-template-columns: 1fr;
       }
 
-      .panel,
-      .project-card,
-      .timeline-card {
-        padding: 22px;
-      }
+      .hero h1 { font-size: clamp(2.7rem, 12vw, 3.6rem); letter-spacing: -2px; }
+      .hero-description { font-size: .96rem; }
 
-      .button-row {
-        align-items: stretch;
-      }
+      .portrait-wrap { width: min(78%, 285px); margin: 0 auto 14px; }
+      .photo-caption { left: -12px; }
 
-      .button-row .btn {
-        flex: 1 1 auto;
-      }
-
-      .contact-panel {
-        padding: 26px;
-      }
+      .button-row .btn { flex: 1 1 auto; }
+      .panel, .project-card, .timeline-card { padding: 21px; }
+      .certificate-image { height: 205px; }
+      .award-card img { height: 260px; }
+      .contact-panel { padding: 25px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
+      html { scroll-behavior: auto; }
       *, *::before, *::after {
         animation: none !important;
         transition: none !important;
       }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
-      }
+      .reveal { opacity: 1; transform: none; }
     }
   </style>
 </head>
 
 <body>
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="#home">Jonnada <span>Kiran</span></a>
 
-  <!-- NAVIGATION -->
-  <header class="navbar">
-    <div class="container nav-inner">
-      <a class="brand" href="#home">Jonnada <span>Kiran</span></a>
+    <button class="menu-toggle" id="menuToggle" type="button"
+      aria-label="Open navigation" aria-expanded="false"
+      aria-controls="navLinks">☰</button>
 
-      <button class="menu-toggle" id="menuToggle"
-        type="button" aria-label="Open navigation"
-        aria-expanded="false" aria-controls="navLinks">☰</button>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certificates</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#leadership">Leadership</a>
+      <a class="nav-cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a class="nav-cta" href="#contact">Contact Me</a>
-      </nav>
+<main>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-label">Data Analytics · Reporting · Business Intelligence</div>
+        <h1>Jonnada <span>Kiran</span></h1>
+        <p class="hero-role">Data Analyst | Junior Business Analyst</p>
+        <p class="hero-description">
+          I enjoy working with data to identify patterns, understand performance
+          and communicate insights clearly. I use Power BI, SQL, Excel, Tableau
+          and Python in my analytics projects, with a focus on turning data into
+          useful business information.
+        </p>
+
+        <div class="button-row">
+          <a class="btn btn-primary" href="#projects">Explore My Projects ↘</a>
+          <a class="btn btn-secondary" href="./JONNADA_KIRAN_RESUME.pdf"
+             target="_blank" rel="noopener">View Resume ↗</a>
+          <a class="btn btn-secondary" href="./JONNADA_KIRAN_RESUME.pdf"
+             download="Jonnada-Kiran-Resume.pdf">Download Resume ↓</a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/JONNADAKIRAN"
+             target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/jonnada-kiran-33bab5279/"
+             target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="mailto:jonnadakiran19@gmail.com">Email ↗</a>
+        </div>
+      </div>
+
+      <div class="portrait-wrap">
+        <div class="portrait-frame">
+          <img src="./profile.jpg" alt="Portrait of Jonnada Kiran"
+            onerror="this.style.display='none';document.getElementById('photoFallback').style.display='grid';">
+          <div id="photoFallback"
+            style="display:none;aspect-ratio:4/5;place-items:center;background:#e0e9f6;border-radius:16px;color:#244c83;font-size:4rem;font-weight:800;">
+            JK
+          </div>
+        </div>
+        <div class="photo-caption">
+          Analytics &amp; Business Insights
+          <small>Learning · Building · Improving</small>
+        </div>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="hero-label">Data Analytics · Reporting · Business Intelligence</div>
-
-          <h1>Jonnada <span>Kiran</span></h1>
-
-          <p class="hero-role">Data Analyst | Junior Business Analyst</p>
-
-          <p class="hero-description">
-            I enjoy working with data to identify patterns, understand
-            performance and communicate insights clearly. I use Power BI,
-            SQL, Excel, Tableau and Python in my analytics projects, with
-            a focus on turning data into useful business information.
-          </p>
-
-          <div class="button-row">
-            <a class="btn btn-primary" href="#projects">Explore My Projects ↘</a>
-
-            <a class="btn btn-secondary"
-              href="./JONNADA_KIRAN_RESUME.pdf"
-              target="_blank" rel="noopener">
-              View Resume ↗
-            </a>
-
-            <a class="btn btn-secondary"
-              href="./JONNADA_KIRAN_RESUME.pdf"
-              download="Jonnada-Kiran-Resume.pdf">
-              Download Resume ↓
-            </a>
-          </div>
-
-          <div class="social-links">
-            <a href="https://github.com/JONNADAKIRAN"
-              target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-
-            <a href="https://www.linkedin.com/in/jonnada-kiran-33bab5279/"
-              target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-
-            <a href="mailto:jonnadakiran19@gmail.com">Email ↗</a>
-          </div>
-        </div>
-
-        <div class="portrait-wrap">
-          <div class="portrait-frame">
-            <img src="./profile.jpg"
-              alt="Portrait of Jonnada Kiran"
-              onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='grid';">
-
-            <div id="photoFallback"
-              style="display:none; aspect-ratio:4/5; place-items:center; background:#e0e9f6; border-radius:17px; color:#244c83; font-family:Manrope,sans-serif; font-size:4rem; font-weight:800;">
-              JK
-            </div>
-          </div>
-
-          <div class="portrait-caption">
-            Analytics &amp; Business Insights
-            <span>Learning · Building · Improving</span>
-          </div>
-        </div>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">About Me</span>
+        <h2>Curious about data. Focused on insights.</h2>
+        <p>A little about my background and the work I want to do.</p>
       </div>
-    </section>
 
-    <!-- ABOUT -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">About Me</span>
-          <h2>Curious about data. Focused on insights.</h2>
-          <p>A quick introduction to my background and the work I want to do.</p>
-        </div>
-
-        <div class="about-grid">
-          <article class="panel reveal">
-            <h3>My Profile</h3>
-            <p>
-              I am a B.Tech graduate in Biotechnology from the National
-              Institute of Technology Andhra Pradesh, building my career
-              in data analytics and business analysis.
-            </p>
-            <p>
-              Through dashboard and analysis projects, I have practised
-              cleaning data, organising information, analysing trends,
-              defining KPIs and presenting results in a clear visual format.
-            </p>
-            <p>
-              I am looking for an entry-level opportunity where I can
-              contribute analytical thinking, attention to detail and a
-              willingness to learn while solving practical business problems.
-            </p>
-          </article>
-
-          <article class="panel reveal">
-            <h3>What I Bring</h3>
-            <div class="highlight-list" style="margin-top:22px;">
-              <div class="highlight-item">
-                <div class="highlight-icon">01</div>
-                <div>
-                  <strong>Data Analysis</strong>
-                  <small>Data cleaning, trend analysis and structured reporting.</small>
-                </div>
-              </div>
-
-              <div class="highlight-item">
-                <div class="highlight-icon">02</div>
-                <div>
-                  <strong>Business Intelligence</strong>
-                  <small>Dashboards, KPIs, data modelling and visual storytelling.</small>
-                </div>
-              </div>
-
-              <div class="highlight-item">
-                <div class="highlight-icon">03</div>
-                <div>
-                  <strong>Communication</strong>
-                  <small>Clear documentation, collaboration and presenting findings.</small>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="section section-alt" id="skills">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Technical Skills</span>
-          <h2>Tools I use to work with data</h2>
-          <p>My current skills across analysis, visualisation and reporting.</p>
-        </div>
-
-        <div class="skills-grid">
-          <article class="skill-card reveal">
-            <h3>Data Analysis</h3>
-            <div class="tag-list">
-              <span class="tag">Excel</span>
-              <span class="tag">Pivot Tables</span>
-              <span class="tag">Data Cleaning</span>
-              <span class="tag">Trend Analysis</span>
-              <span class="tag">KPI Reporting</span>
-            </div>
-          </article>
-
-          <article class="skill-card reveal">
-            <h3>Business Intelligence</h3>
-            <div class="tag-list">
-              <span class="tag">Power BI</span>
-              <span class="tag">Tableau</span>
-              <span class="tag">Dashboards</span>
-              <span class="tag">Data Visualisation</span>
-            </div>
-          </article>
-
-          <article class="skill-card reveal">
-            <h3>Power BI</h3>
-            <div class="tag-list">
-              <span class="tag">Power Query</span>
-              <span class="tag">DAX</span>
-              <span class="tag">Data Modelling</span>
-              <span class="tag">Table Relationships</span>
-              <span class="tag">YTD Calculations</span>
-            </div>
-          </article>
-
-          <article class="skill-card reveal">
-            <h3>SQL &amp; Databases</h3>
-            <div class="tag-list">
-              <span class="tag">SQL</span>
-              <span class="tag">MySQL</span>
-              <span class="tag">Joins</span>
-              <span class="tag">Subqueries</span>
-              <span class="tag">Aggregations</span>
-            </div>
-          </article>
-
-          <article class="skill-card reveal">
-            <h3>Python</h3>
-            <div class="tag-list">
-              <span class="tag">Python</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">NumPy</span>
-              <span class="tag">Matplotlib</span>
-            </div>
-          </article>
-
-          <article class="skill-card reveal">
-            <h3>Business &amp; Reporting</h3>
-            <div class="tag-list">
-              <span class="tag">Reporting</span>
-              <span class="tag">Documentation</span>
-              <span class="tag">Problem Solving</span>
-              <span class="tag">Attention to Detail</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Selected Work</span>
-          <h2>Projects &amp; practical learning</h2>
+      <div class="about-grid">
+        <article class="panel reveal">
+          <h3>My Profile</h3>
           <p>
-            Examples of my work with dashboards, reporting, content analysis
-            and data modelling.
+            I completed my B.Tech in Biotechnology at the National Institute
+            of Technology Andhra Pradesh and am building my career in data
+            analytics and business analysis.
           </p>
-        </div>
+          <p>
+            Through dashboard and analysis projects, I have practised data
+            cleaning, trend analysis, KPI reporting and presenting information
+            in clear visual formats.
+          </p>
+          <p>
+            I am looking for an entry-level opportunity where I can apply
+            analytical thinking, attention to detail and a willingness to learn.
+          </p>
+        </article>
 
-        <div class="project-grid">
-          <article class="project-card reveal">
-            <div class="project-top">
-              <div class="project-icon">PBI</div>
-              <span class="project-type">Business Intelligence</span>
+        <article class="panel reveal">
+          <h3>What I Bring</h3>
+          <div class="highlights">
+            <div class="highlight">
+              <div class="highlight-icon">01</div>
+              <div><strong>Data Analysis</strong><small>Data cleaning, trend analysis and reporting.</small></div>
             </div>
-            <h3>Power BI KPI Dashboard</h3>
-            <p>
-              A dashboard project focused on presenting key performance
-              indicators, tracking results and making information easier to interpret.
-            </p>
-            <div class="tag-list">
-              <span class="tag">Power BI</span>
-              <span class="tag">DAX</span>
-              <span class="tag">KPIs</span>
+            <div class="highlight">
+              <div class="highlight-icon">02</div>
+              <div><strong>Business Intelligence</strong><small>Dashboards, KPIs and visual storytelling.</small></div>
             </div>
-            <div class="project-footer">
-              <span class="muted" style="font-size:.82rem;">Dashboard &amp; reporting</span>
-              <a class="project-link"
-                href="https://github.com/JONNADAKIRAN?tab=repositories"
-                target="_blank" rel="noopener noreferrer">GitHub Repositories ↗</a>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-top">
-              <div class="project-icon">TBL</div>
-              <span class="project-type">People Analytics</span>
-            </div>
-            <h3>Tableau HR Analytics Dashboard</h3>
-            <p>
-              An HR analytics dashboard project designed to organise workforce
-              information and present HR metrics through interactive visuals.
-            </p>
-            <div class="tag-list">
-              <span class="tag">Tableau</span>
-              <span class="tag">HR Analytics</span>
-              <span class="tag">Visualisation</span>
-            </div>
-            <div class="project-footer">
-              <span class="muted" style="font-size:.82rem;">HR metrics &amp; insights</span>
-              <a class="project-link"
-                href="https://github.com/JONNADAKIRAN?tab=repositories"
-                target="_blank" rel="noopener noreferrer">GitHub Repositories ↗</a>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-top">
-              <div class="project-icon">NFX</div>
-              <span class="project-type">Content Analytics</span>
-            </div>
-            <h3>Netflix Content Analysis</h3>
-            <p>
-              An analysis project exploring content attributes and patterns,
-              using data preparation and visual summaries to communicate findings.
-            </p>
-            <div class="tag-list">
-              <span class="tag">Power BI</span>
-              <span class="tag">Excel</span>
-              <span class="tag">Data Analysis</span>
-            </div>
-            <div class="project-footer">
-              <span class="muted" style="font-size:.82rem;">Content trends</span>
-              <a class="project-link"
-                href="https://github.com/JONNADAKIRAN?tab=repositories"
-                target="_blank" rel="noopener noreferrer">GitHub Repositories ↗</a>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-top">
-              <div class="project-icon">EXL</div>
-              <span class="project-type">Sales Analytics</span>
-            </div>
-            <h3>Chocolate Shipment Analysis</h3>
-            <p>
-              A shipment analysis dashboard concept focused on summarising
-              sales and shipment information to support performance reporting.
-            </p>
-            <div class="tag-list">
-              <span class="tag">Excel</span>
-              <span class="tag">Power BI</span>
-              <span class="tag">Reporting</span>
-            </div>
-            <div class="project-footer">
-              <span class="muted" style="font-size:.82rem;">Shipment performance</span>
-              <a class="project-link"
-                href="https://github.com/JONNADAKIRAN?tab=repositories"
-                target="_blank" rel="noopener noreferrer">GitHub Repositories ↗</a>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-top">
-              <div class="project-icon">PY</div>
-              <span class="project-type">Research &amp; Modelling</span>
-            </div>
-            <h3>Algal Productivity &amp; Carbon Capture Modelling</h3>
-            <p>
-              A theoretical modelling project using regional climate data
-              to explore microalgae productivity and potential carbon capture.
-            </p>
-            <div class="tag-list">
-              <span class="tag">Python</span>
-              <span class="tag">Climate Data</span>
-              <span class="tag">Modelling</span>
-            </div>
-            <div class="project-footer">
-              <span class="muted" style="font-size:.82rem;">Data-driven research</span>
-              <a class="project-link"
-                href="https://github.com/JONNADAKIRAN?tab=repositories"
-                target="_blank" rel="noopener noreferrer">GitHub Repositories ↗</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section class="section section-alt" id="education">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Education</span>
-          <h2>My academic background</h2>
-          <p>A foundation in science, research and structured problem-solving.</p>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-card reveal">
-            <span class="timeline-date">2022 – 2026</span>
-            <h3>B.Tech in Biotechnology</h3>
-            <div class="institution">National Institute of Technology Andhra Pradesh</div>
-            <p>
-              Undergraduate study with experience in research projects,
-              technical documentation, teamwork and analytical problem-solving.
-            </p>
-          </article>
-
-          <article class="timeline-card reveal">
-            <span class="timeline-date">2020 – 2022</span>
-            <h3>Class XII — MPC</h3>
-            <div class="institution">Narayana Junior College, Hyderabad</div>
-            <p>Percentage: 94%</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section class="section" id="experience">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Experience &amp; Achievements</span>
-          <h2>Research, teamwork and leadership</h2>
-          <p>Experiences that helped me develop a structured and collaborative approach.</p>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-card reveal">
-            <span class="timeline-date">May – July 2024</span>
-            <h3>Research Intern — Fermentation-Based Protein Production</h3>
-            <div class="institution">National Institute of Technology Andhra Pradesh</div>
-            <ul>
-              <li>Recorded and reviewed research observations.</li>
-              <li>Supported technical documentation and organised information.</li>
-              <li>Collaborated with others during project activities.</li>
-            </ul>
-          </article>
-
-          <article class="timeline-card reveal">
-            <span class="timeline-date">Student Leadership</span>
-            <h3>Joint Secretary</h3>
-            <div class="institution">Biotechnology Engineering Association, NIT Andhra Pradesh</div>
-            <p>
-              Contributed to student association activities, coordination
-              and collaboration.
-            </p>
-          </article>
-        </div>
-
-        <div class="achievement-grid">
-          <article class="achievement-card reveal">
-            <h3>GATE Biotechnology</h3>
-            <p>All India Rank 912 in GATE 2025, as reported in my academic record.</p>
-          </article>
-
-          <article class="achievement-card reveal">
-            <h3>Smart India Hackathon 2024</h3>
-            <p>Participant through the Innovation and Entrepreneurship Cell at NIT Andhra Pradesh.</p>
-          </article>
-
-          <article class="achievement-card reveal">
-            <h3>Python Certification</h3>
-            <p>Completed the 22-hour Complete Python Bootcamp course on Udemy in December 2024.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact-panel reveal">
-          <div>
-            <span class="eyebrow">Contact</span>
-            <h2>Let's connect professionally.</h2>
-            <p>
-              I am interested in entry-level Data Analyst and Junior Business
-              Analyst opportunities where I can apply my skills, learn from
-              experienced teams and contribute to meaningful projects.
-            </p>
-
-            <div class="button-row" style="margin-top:24px; margin-bottom:0;">
-              <a class="btn btn-primary"
-                href="mailto:jonnadakiran19@gmail.com">Email Me ↗</a>
-              <a class="btn btn-secondary"
-                href="https://www.linkedin.com/in/jonnada-kiran-33bab5279/"
-                target="_blank" rel="noopener noreferrer">Connect on LinkedIn ↗</a>
+            <div class="highlight">
+              <div class="highlight-icon">03</div>
+              <div><strong>Teamwork</strong><small>Documentation, collaboration and coordination.</small></div>
             </div>
           </div>
-
-          <div class="contact-details">
-            <a href="mailto:jonnadakiran19@gmail.com">
-              ✉ &nbsp; jonnadakiran19@gmail.com
-            </a>
-            <a href="https://github.com/JONNADAKIRAN"
-              target="_blank" rel="noopener noreferrer">
-              ↗ &nbsp; github.com/JONNADAKIRAN
-            </a>
-            <a href="https://www.linkedin.com/in/jonnada-kiran-33bab5279/"
-              target="_blank" rel="noopener noreferrer">
-              ↗ &nbsp; LinkedIn Profile
-            </a>
-            <p>Hyderabad, Telangana, India</p>
-          </div>
-        </div>
+        </article>
       </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Jonnada Kiran</span>
-      <span>Designed for data, clarity and impact.</span>
-      <a href="#home">Back to top ↑</a>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // Mobile navigation
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+  <!-- SKILLS -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Technical Skills</span>
+        <h2>Tools I use to work with data</h2>
+        <p>My current skills across analysis, visualisation and reporting.</p>
+      </div>
 
-    menuToggle.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-      menuToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation" : "Open navigation"
-      );
-      menuToggle.textContent = isOpen ? "×" : "☰";
+      <div class="skills-grid">
+        <article class="skill-card reveal">
+          <h3>Data Analysis</h3>
+          <div class="tag-list">
+            <span class="tag">Excel</span><span class="tag">Pivot Tables</span>
+            <span class="tag">Data Cleaning</span><span class="tag">Trend Analysis</span>
+            <span class="tag">KPI Reporting</span>
+          </div>
+        </article>
+        <article class="skill-card reveal">
+          <h3>Business Intelligence</h3>
+          <div class="tag-list">
+            <span class="tag">Power BI</span><span class="tag">Tableau</span>
+            <span class="tag">Dashboards</span><span class="tag">Visualisation</span>
+          </div>
+        </article>
+        <article class="skill-card reveal">
+          <h3>Power BI</h3>
+          <div class="tag-list">
+            <span class="tag">Power Query</span><span class="tag">DAX</span>
+            <span class="tag">Data Modelling</span><span class="tag">Relationships</span>
+            <span class="tag">YTD Calculations</span>
+          </div>
+        </article>
+        <article class="skill-card reveal">
+          <h3>SQL &amp; Databases</h3>
+          <div class="tag-list">
+            <span class="tag">SQL</span><span class="tag">MySQL</span>
+            <span class="tag">Joins</span><span class="tag">Subqueries</span>
+            <span class="tag">Aggregations</span>
+          </div>
+        </article>
+        <article class="skill-card reveal">
+          <h3>Python</h3>
+          <div class="tag-list">
+            <span class="tag">Python</span><span class="tag">Pandas</span>
+            <span class="tag">NumPy</span><span class="tag">Matplotlib</span>
+          </div>
+        </article>
+        <article class="skill-card reveal">
+          <h3>Professional Skills</h3>
+          <div class="tag-list">
+            <span class="tag">Documentation</span><span class="tag">Problem Solving</span>
+            <span class="tag">Attention to Detail</span><span class="tag">Teamwork</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Selected Work</span>
+        <h2>Projects &amp; practical learning</h2>
+        <p>Examples of dashboarding, reporting, content analysis and modelling.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <div class="project-icon">PBI</div>
+          <div class="project-type">Business Intelligence</div>
+          <h3>Power BI KPI Dashboard</h3>
+          <p>A dashboard project focused on presenting key performance indicators and making results easier to interpret.</p>
+          <div class="tag-list"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">KPIs</span></div>
+          <div class="project-footer"><a class="project-link" href="https://github.com/JONNADAKIRAN?tab=repositories" target="_blank" rel="noopener">Browse project repositories ↗</a></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-icon">TBL</div>
+          <div class="project-type">People Analytics</div>
+          <h3>Tableau HR Analytics Dashboard</h3>
+          <p>An HR dashboard project designed to organise workforce information and present metrics through visualisations.</p>
+          <div class="tag-list"><span class="tag">Tableau</span><span class="tag">HR Analytics</span><span class="tag">Charts</span></div>
+          <div class="project-footer"><a class="project-link" href="https://github.com/JONNADAKIRAN?tab=repositories" target="_blank" rel="noopener">Browse project repositories ↗</a></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-icon">NFX</div>
+          <div class="project-type">Content Analytics</div>
+          <h3>Netflix Content Analysis</h3>
+          <p>An analysis project exploring content attributes and patterns through data preparation and visual summaries.</p>
+          <div class="tag-list"><span class="tag">Power BI</span><span class="tag">Excel</span><span class="tag">Analysis</span></div>
+          <div class="project-footer"><a class="project-link" href="https://github.com/JONNADAKIRAN?tab=repositories" target="_blank" rel="noopener">Browse project repositories ↗</a></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-icon">EXL</div>
+          <div class="project-type">Sales Analytics</div>
+          <h3>Chocolate Shipment Analysis</h3>
+          <p>A shipment analysis dashboard concept focused on summarising sales and shipment information for performance reporting.</p>
+          <div class="tag-list"><span class="tag">Excel</span><span class="tag">Power BI</span><span class="tag">Reporting</span></div>
+          <div class="project-footer"><a class="project-link" href="https://github.com/JONNADAKIRAN?tab=repositories" target="_blank" rel="noopener">Browse project repositories ↗</a></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-icon">PY</div>
+          <div class="project-type">Research &amp; Modelling</div>
+          <h3>Algal Productivity &amp; Carbon Capture</h3>
+          <p>A theoretical modelling project using regional climate data to explore microalgae productivity and potential carbon capture.</p>
+          <div class="tag-list"><span class="tag">Python</span><span class="tag">Climate Data</span><span class="tag">Modelling</span></div>
+          <div class="project-footer"><a class="project-link" href="https://github.com/JONNADAKIRAN?tab=repositories" target="_blank" rel="noopener">Browse project repositories ↗</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Education</span>
+        <h2>My academic background</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-card reveal">
+          <span class="timeline-date">2022–2026</span>
+          <h3>B.Tech in Biotechnology</h3>
+          <div class="institution">National Institute of Technology Andhra Pradesh</div>
+          <p>Undergraduate study with experience in research projects, technical documentation and analytical problem-solving.</p>
+        </article>
+
+        <article class="timeline-card reveal">
+          <span class="timeline-date">2020–2022</span>
+          <h3>Class XII — MPC</h3>
+          <div class="institution">Narayana Junior College, Hyderabad</div>
+          <p>Percentage: 94%</p>
+        </article>
+
+        <article class="timeline-card reveal">
+          <span class="timeline-date">2020</span>
+          <h3>Class X — 100%</h3>
+          <div class="institution">Siva Sivani SPS High School</div>
+          <p>Completed secondary school education with 100% marks.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE & LEADERSHIP -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Experience</span>
+        <h2>Research &amp; leadership</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-card reveal">
+          <span class="timeline-date">May–July 2024</span>
+          <h3>Research Intern — Fermentation-Based Protein Production</h3>
+          <div class="institution">National Institute of Technology Andhra Pradesh</div>
+          <ul>
+            <li>Recorded and reviewed research observations.</li>
+            <li>Supported technical documentation and organised information.</li>
+            <li>Collaborated with others during project activities.</li>
+          </ul>
+        </article>
+
+        <article class="timeline-card reveal">
+          <span class="timeline-date">Student Leadership</span>
+          <h3>Joint Secretary</h3>
+          <div class="institution">Biotechnology Engineering Association, NIT Andhra Pradesh</div>
+          <p>Contributed to student association activities, coordination and collaboration.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="section section-alt" id="certifications">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Continuous Learning</span>
+        <h2>NPTEL Certifications</h2>
+        <p>Selected certificates from my technical and academic learning.</p>
+      </div>
+
+      <div class="certificate-grid">
+        <article class="certificate-card reveal">
+          <div class="certificate-image">
+            <img src="./nptel-food-microbiology.png" alt="NPTEL Food Microbiology certificate" loading="lazy">
+          </div>
+          <div class="certificate-content">
+            <h3>Food Microbiology for Safe and Sustainable Food Systems</h3>
+            <p>IIT Kharagpur · Feb–Apr 2026 · Score: 84%</p>
+            <div class="tag-list"><span class="tag">NPTEL</span><span class="tag">Elite</span></div>
+          </div>
+        </article>
+
+        <article class="certificate-card reveal">
+          <div class="certificate-image">
+            <img src="./nptel-cell-culture.png" alt="NPTEL Cell Culture Technologies certificate" loading="lazy">
+          </div>
+          <div class="certificate-content">
+            <h3>Cell Culture Technologies</h3>
+            <p>IIT Kanpur · Aug–Oct 2024 · Score: 71%</p>
+            <div class="tag-list"><span class="tag">NPTEL</span><span class="tag">Elite</span></div>
+          </div>
+        </article>
+
+        <article class="certificate-card reveal">
+          <div class="certificate-image">
+            <img src="./nptel-plant-bioprocessing.png" alt="NPTEL Plant Cell Bioprocessing certificate" loading="lazy">
+          </div>
+          <div class="certificate-content">
+            <h3>Plant Cell Bioprocessing</h3>
+            <p>IIT Madras · Jul–Sep 2025 · Score: 58%</p>
+            <div class="tag-list"><span class="tag">NPTEL</span><span class="tag">Bioprocessing</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section" id="achievements">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Recognition</span>
+        <h2>Achievements &amp; participation</h2>
+        <p>Academic milestones and participation certificates.</p>
+      </div>
+
+      <div class="award-grid">
+        <article class="award-card reveal">
+          <img src="./gate-award.png" alt="GATE BT 2025 qualification award plaque" loading="lazy">
+          <h3>GATE Biotechnology 2025</h3>
+          <p>Qualified GATE BT 2025. NIT Andhra Pradesh recognition.</p>
+          <div class="tag-list" style="margin-top:12px;"><span class="tag">GATE BT</span><span class="tag">2025</span></div>
+        </article>
+
+        <article class="award-card reveal">
+          <img src="./gate-presentation.png" alt="GATE qualification award presentation" loading="lazy">
+          <h3>Academic Award Presentation</h3>
+          <p>Recognition at NIT Andhra Pradesh for GATE Biotechnology qualification.</p>
+        </article>
+
+        <article class="award-card reveal">
+          <img src="./sih-certificate.png" alt="Smart India Hackathon 2024 certificate of appreciation" loading="lazy">
+          <h3>Smart India Hackathon 2024</h3>
+          <p>Participated in the internal hackathon at NIT Andhra Pradesh on 11 September 2024.</p>
+        </article>
+      </div>
+
+      <div class="timeline" style="margin-top:20px;">
+        <article class="timeline-card reveal">
+          <span class="timeline-date">December 2024</span>
+          <h3>Complete Python Bootcamp</h3>
+          <div class="institution">Udemy · 22-hour course</div>
+          <p>Python programming course completion.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP & CAMPUS ACTIVITIES -->
+  <section class="section section-alt" id="leadership">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Beyond Academics</span>
+        <h2>Leadership &amp; Campus Activities</h2>
+        <p>Student involvement and campus memories from NIT Andhra Pradesh.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="activity-card reveal">
+          <img src="./vulcanzy-event.jpeg" alt="Vulcanzy 2K26 campus group photo" loading="lazy">
+          <div class="activity-content">
+            <h3>Vulcanzy 2K26</h3>
+            <p>Campus event and student community involvement at NIT Andhra Pradesh.</p>
+          </div>
+        </article>
+
+        <article class="activity-card reveal">
+          <img src="./gate-presentation.png" alt="Academic award presentation at NIT Andhra Pradesh" loading="lazy">
+          <div class="activity-content">
+            <h3>Academic Recognition</h3>
+            <p>A milestone from my academic journey at NIT Andhra Pradesh.</p>
+          </div>
+        </article>
+      </div>
+
+      <article class="panel reveal" style="margin-top:22px;">
+        <h3>Joint Secretary — Biotechnology Engineering Association</h3>
+        <p>
+          Contributed to student association activities and coordination.
+          This role helped me develop collaboration, communication and
+          organisational skills.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-panel reveal">
+        <div>
+          <span class="eyebrow">Contact</span>
+          <h2>Let's connect professionally.</h2>
+          <p>
+            I am interested in entry-level Data Analyst and Junior Business
+            Analyst opportunities where I can apply my skills, learn from
+            experienced teams and contribute to meaningful projects.
+          </p>
+          <div class="button-row" style="margin-top:22px;margin-bottom:0;">
+            <a class="btn btn-primary" href="mailto:jonnadakiran19@gmail.com">Email Me ↗</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/jonnada-kiran-33bab5279/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <div class="contact-details">
+          <a href="mailto:jonnadakiran19@gmail.com">✉ jonnadakiran19@gmail.com</a>
+          <a href="https://github.com/JONNADAKIRAN" target="_blank" rel="noopener">GitHub Profile ↗</a>
+          <a href="https://www.linkedin.com/in/jonnada-kiran-33bab5279/" target="_blank" rel="noopener">LinkedIn Profile ↗</a>
+          <p>Hyderabad, Telangana, India</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Jonnada Kiran</span>
+    <span>Data · Clarity · Impact</span>
+    <a href="#home">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  menuToggle.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+    menuToggle.textContent = open ? "×" : "☰";
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation");
+      menuToggle.textContent = "☰";
     });
+  });
 
-    navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-        menuToggle.setAttribute("aria-label", "Open navigation");
-        menuToggle.textContent = "☰";
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const revealItems = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          obs.unobserve(entry.target);
+        }
       });
-    });
+    }, { threshold: 0.1 });
 
-    // Current year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Gentle scroll reveal, with a fallback for reduced motion
-    const revealItems = document.querySelectorAll(".reveal");
-
-    if ("IntersectionObserver" in window &&
-        !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      const observer = new IntersectionObserver((entries, currentObserver) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            currentObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-
-      revealItems.forEach((item) => observer.observe(item));
-    } else {
-      revealItems.forEach((item) => item.classList.add("visible"));
-    }
-  </script>
+    revealItems.forEach(item => observer.observe(item));
+  } else {
+    revealItems.forEach(item => item.classList.add("visible"));
+  }
+</script>
 </body>
 </html>
